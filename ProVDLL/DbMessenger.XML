@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DbMessenger</name>
+    </assembly>
+    <members>
+        <member name="M:DbMessenger.DbComponent.WriteLog(DbMessenger.LogTypes,System.String,System.String,System.String)">
+            <summary>
+            寫入一般log
+            </summary>
+            <param name="logType"></param>
+            <param name="partNo"></param>
+            <param name="lotNo"></param>
+            <param name="content"></param>
+        </member>
+        <member name="M:DbMessenger.DbComponent.WriteAlarm(System.String,System.String,System.Single,System.String,System.String,System.String,DbMessenger.MeanTimeTypes)">
+            <summary>
+            寫入警報
+            </summary>
+            <param name="partNo"></param>
+            <param name="lotNo"></param>
+            <param name="alarmPeriod"></param>
+            <param name="errorCode"></param>
+            <param name="module"></param>
+            <param name="errorMsg"></param>
+            <param name="meanTimeType"></param>
+        </member>
+        <member name="M:DbMessenger.DbComponent.WriteLaserHistoryIfChanged(System.String,System.String,DbMessenger.LaserSetting)">
+            <summary>
+            經比對如果輸入資料與最新一筆記錄不同，則寫入雷射參數歷史記錄
+            </summary>
+            <param name="partNo"></param>
+            <param name="lotNo"></param>
+            <param name="laser"></param>
+        </member>
+        <member name="M:DbMessenger.DbComponent.IsTheSameLotNo(System.String)">
+            <summary>
+            開發中，判別與最新一筆資料的批號是否相同
+            </summary>
+            <param name="lotNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DbMessenger.DbComponent.GetLaserPowerFromPowerCurve(System.Single,System.Single)">
+            <summary>
+            查詢雷射power curve中的power
+            </summary>
+            <param name="current"></param>
+            <param name="frequency"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DbMessenger.DbComponent.GetLaserCurrentFromPowerCurve(System.Single,System.Single)">
+            <summary>
+            查詢雷射power curve中的current
+            </summary>
+            <param name="current"></param>
+            <param name="frequency"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DbMessenger.DbComponent.WriteLaserProductSettingIfNew(DbMessenger.LaserProductSetting)">
+            <summary>
+            新增或更新雷射產品打印成功的參數
+            </summary>
+            <param name="lpSetting"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DbMessenger.DbComponent.GetGoldenLaserPower(System.String,System.String,System.String,System.Single@)">
+            <summary>
+            查詢標準機的雷射power
+            </summary>
+            <param name="name"></param>
+            <param name="fileName"></param>
+            <param name="objectName"></param>
+            <param name="power"></param>
+            <returns></returns>
+        </member>
+        <member name="F:DbMessenger.DbComponent.components">
+            <summary>
+            設計工具所需的變數。
+            </summary>
+        </member>
+        <member name="M:DbMessenger.DbComponent.Dispose(System.Boolean)">
+            <summary> 
+            清除任何使用中的資源。
+            </summary>
+            <param name="disposing">如果應該處置 Managed 資源則為 true，否則為 false。</param>
+        </member>
+        <member name="M:DbMessenger.DbComponent.InitializeComponent">
+            <summary>
+            此為設計工具支援所需的方法 - 請勿使用程式碼編輯器
+            修改這個方法的內容。
+            </summary>
+        </member>
+    </members>
+</doc>

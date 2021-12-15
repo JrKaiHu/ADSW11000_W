@@ -1,0 +1,987 @@
+發生應用線程未處理的異常：2021/3/12 下午 04:23:24
+Application UnhandledException:指定的轉換無效。;
+堆棧追蹤:   於 ADSW11000.MainF3.timerTeachFlow_Tick(Object sender, EventArgs e) 於 d:\ADSW11000\ADSW11000\MainF3.cs: 行 2316
+   於 System.Windows.Forms.Timer.OnTick(EventArgs e)
+   於 System.Windows.Forms.Timer.TimerNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.Run(Form mainForm)
+   於 ADSW11000.Program.Main() 於 d:\ADSW11000\ADSW11000\Program.cs: 行 652
+   於 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   於 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   於 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   於 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Threading.ThreadHelper.ThreadStart()
+---------------------------------------------------------
+發生應用線程未處理的異常：2021/3/15 上午 10:31:03
+Application UnhandledException:並未將物件參考設定為物件的執行個體。;
+堆棧追蹤:   於 ADSW11000.MainF3.ChoiceAuto(Object sender) 於 d:\ADSW11000\ADSW11000\MainF3.cs: 行 1165
+   於 ADSW11000.MainF3.timerTeachFlow_Tick(Object sender, EventArgs e) 於 d:\ADSW11000\ADSW11000\MainF3.cs: 行 3044
+   於 System.Windows.Forms.Timer.OnTick(EventArgs e)
+   於 System.Windows.Forms.Timer.TimerNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.Run(Form mainForm)
+   於 ADSW11000.Program.Main() 於 d:\ADSW11000\ADSW11000\Program.cs: 行 652
+   於 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   於 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   於 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   於 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Threading.ThreadHelper.ThreadStart()
+---------------------------------------------------------
+發生應用線程未處理的異常：2021/3/15 上午 11:58:46
+Application UnhandledException:並未將物件參考設定為物件的執行個體。;
+堆棧追蹤:   於 ADSW11000.MainF3.timerTeachFlow_Tick(Object sender, EventArgs e) 於 d:\ADSW11000\ADSW11000\MainF3.cs: 行 3038
+   於 System.Windows.Forms.Timer.OnTick(EventArgs e)
+   於 System.Windows.Forms.Timer.TimerNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.Run(Form mainForm)
+   於 ADSW11000.Program.Main() 於 d:\ADSW11000\ADSW11000\Program.cs: 行 652
+   於 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   於 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   於 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   於 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Threading.ThreadHelper.ThreadStart()
+---------------------------------------------------------
+發生應用線程未處理的異常：2021/3/15 下午 09:29:04
+Application UnhandledException:索引超出範圍。必須為非負數且小於集合的大小。
+參數名稱: index;
+堆棧追蹤:   於 System.Collections.ArrayList.get_Item(Int32 index)
+   於 System.Windows.Forms.DataGridViewSelectedCellCollection.get_Item(Int32 index)
+   於 ADSW11000.PackageExF.button31_Click(Object sender, EventArgs e) 於 d:\ADSW11000\ADSW11000\User(使用者修改)\PackageExF.cs: 行 1310
+   於 System.Windows.Forms.Control.OnClick(EventArgs e)
+   於 System.Windows.Forms.Button.OnClick(EventArgs e)
+   於 System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   於 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   於 System.Windows.Forms.Control.WndProc(Message& m)
+   於 System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   於 System.Windows.Forms.Button.WndProc(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.Run(Form mainForm)
+   於 ADSW11000.Program.Main() 於 d:\ADSW11000\ADSW11000\Program.cs: 行 652
+   於 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   於 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   於 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   於 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Threading.ThreadHelper.ThreadStart()
+---------------------------------------------------------
+發生應用線程未處理的異常：2021/3/15 下午 09:31:10
+Application UnhandledException:索引超出範圍。必須為非負數且小於集合的大小。
+參數名稱: index;
+堆棧追蹤:   於 System.Collections.ArrayList.get_Item(Int32 index)
+   於 System.Windows.Forms.DataGridViewSelectedCellCollection.get_Item(Int32 index)
+   於 ADSW11000.PackageExF.button31_Click(Object sender, EventArgs e) 於 d:\ADSW11000\ADSW11000\User(使用者修改)\PackageExF.cs: 行 1337
+   於 System.Windows.Forms.Control.OnClick(EventArgs e)
+   於 System.Windows.Forms.Button.OnClick(EventArgs e)
+   於 System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   於 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   於 System.Windows.Forms.Control.WndProc(Message& m)
+   於 System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   於 System.Windows.Forms.Button.WndProc(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.Run(Form mainForm)
+   於 ADSW11000.Program.Main() 於 d:\ADSW11000\ADSW11000\Program.cs: 行 652
+   於 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   於 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   於 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   於 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Threading.ThreadHelper.ThreadStart()
+---------------------------------------------------------
+發生應用線程未處理的異常：2021/3/19 下午 04:56:42
+Application UnhandledException:並未將物件參考設定為物件的執行個體。;
+堆棧追蹤:   於 ADSW11000.MainF3.tmUIRefresh_Tick(Object sender, EventArgs e) 於 d:\ADSW11000\ADSW11000\MainF3.cs: 行 1446
+   於 System.Windows.Forms.Timer.OnTick(EventArgs e)
+   於 System.Windows.Forms.Timer.TimerNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.RunDialog(Form form)
+   於 System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   於 System.Windows.Forms.Form.ShowDialog()
+   於 ADSW11000.MainF3.UserLogin() 於 d:\ADSW11000\ADSW11000\MainF3.cs: 行 741
+   於 ADSW11000.MainF3.MainF1_Shown(Object sender, EventArgs e) 於 d:\ADSW11000\ADSW11000\MainF3.cs: 行 654
+   於 System.Windows.Forms.Form.OnShown(EventArgs e)
+   於 System.Windows.Forms.Form.CallShownEvent()
+   於 System.Windows.Forms.Control.InvokeMarshaledCallbackDo(ThreadMethodEntry tme)
+   於 System.Windows.Forms.Control.InvokeMarshaledCallbackHelper(Object obj)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Windows.Forms.Control.InvokeMarshaledCallback(ThreadMethodEntry tme)
+   於 System.Windows.Forms.Control.InvokeMarshaledCallbacks()
+   於 System.Windows.Forms.Control.WndProc(Message& m)
+   於 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   於 System.Windows.Forms.Form.WndProc(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.Run(Form mainForm)
+   於 ADSW11000.Program.Main() 於 d:\ADSW11000\ADSW11000\Program.cs: 行 652
+   於 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   於 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   於 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   於 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Threading.ThreadHelper.ThreadStart()
+---------------------------------------------------------
+發生應用線程未處理的異常：2021/3/25 上午 07:40:03
+Application UnhandledException:並未將物件參考設定為物件的執行個體。;
+堆棧追蹤:   於 ADSW11000.MainF3.tmUIRefresh_Tick(Object sender, EventArgs e) 於 d:\ADSW11000\ADSW11000\MainF3.cs: 行 1446
+   於 System.Windows.Forms.Timer.OnTick(EventArgs e)
+   於 System.Windows.Forms.Timer.TimerNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.RunDialog(Form form)
+   於 System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   於 System.Windows.Forms.Form.ShowDialog()
+   於 ADSW11000.MainF3.UserLogin() 於 d:\ADSW11000\ADSW11000\MainF3.cs: 行 741
+   於 ADSW11000.MainF3.MainF1_Shown(Object sender, EventArgs e) 於 d:\ADSW11000\ADSW11000\MainF3.cs: 行 654
+   於 System.Windows.Forms.Form.OnShown(EventArgs e)
+   於 System.Windows.Forms.Form.CallShownEvent()
+   於 System.Windows.Forms.Control.InvokeMarshaledCallbackDo(ThreadMethodEntry tme)
+   於 System.Windows.Forms.Control.InvokeMarshaledCallbackHelper(Object obj)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Windows.Forms.Control.InvokeMarshaledCallback(ThreadMethodEntry tme)
+   於 System.Windows.Forms.Control.InvokeMarshaledCallbacks()
+   於 System.Windows.Forms.Control.WndProc(Message& m)
+   於 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   於 System.Windows.Forms.Form.WndProc(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.Run(Form mainForm)
+   於 ADSW11000.Program.Main() 於 d:\ADSW11000\ADSW11000\Program.cs: 行 652
+   於 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   於 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   於 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   於 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Threading.ThreadHelper.ThreadStart()
+---------------------------------------------------------
+發生應用線程未處理的異常：2021/3/26 上午 08:05:55
+Application UnhandledException:並未將物件參考設定為物件的執行個體。;
+堆棧追蹤:   於 ADSW11000.MainF3.tmUIRefresh_Tick(Object sender, EventArgs e) 於 d:\ADSW11000\ADSW11000\MainF3.cs: 行 1446
+   於 System.Windows.Forms.Timer.OnTick(EventArgs e)
+   於 System.Windows.Forms.Timer.TimerNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.RunDialog(Form form)
+   於 System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   於 System.Windows.Forms.Form.ShowDialog()
+   於 ADSW11000.MainF3.UserLogin() 於 d:\ADSW11000\ADSW11000\MainF3.cs: 行 741
+   於 ADSW11000.MainF3.MainF1_Shown(Object sender, EventArgs e) 於 d:\ADSW11000\ADSW11000\MainF3.cs: 行 654
+   於 System.Windows.Forms.Form.OnShown(EventArgs e)
+   於 System.Windows.Forms.Form.CallShownEvent()
+   於 System.Windows.Forms.Control.InvokeMarshaledCallbackDo(ThreadMethodEntry tme)
+   於 System.Windows.Forms.Control.InvokeMarshaledCallbackHelper(Object obj)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Windows.Forms.Control.InvokeMarshaledCallback(ThreadMethodEntry tme)
+   於 System.Windows.Forms.Control.InvokeMarshaledCallbacks()
+   於 System.Windows.Forms.Control.WndProc(Message& m)
+   於 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   於 System.Windows.Forms.Form.WndProc(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.Run(Form mainForm)
+   於 ADSW11000.Program.Main() 於 d:\ADSW11000\ADSW11000\Program.cs: 行 652
+   於 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   於 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   於 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   於 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Threading.ThreadHelper.ThreadStart()
+---------------------------------------------------------
+發生應用線程未處理的異常：2021/4/6 上午 09:39:37
+Application UnhandledException:並未將物件參考設定為物件的執行個體。;
+堆棧追蹤:   於 ADSW11000.MainF3.tmUIRefresh_Tick(Object sender, EventArgs e) 於 d:\ADSW11000\ADSW11000\MainF3.cs: 行 1446
+   於 System.Windows.Forms.Timer.OnTick(EventArgs e)
+   於 System.Windows.Forms.Timer.TimerNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.RunDialog(Form form)
+   於 System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   於 System.Windows.Forms.Form.ShowDialog()
+   於 ADSW11000.MainF3.UserLogin() 於 d:\ADSW11000\ADSW11000\MainF3.cs: 行 741
+   於 ADSW11000.MainF3.MainF1_Shown(Object sender, EventArgs e) 於 d:\ADSW11000\ADSW11000\MainF3.cs: 行 654
+   於 System.Windows.Forms.Form.OnShown(EventArgs e)
+   於 System.Windows.Forms.Form.CallShownEvent()
+   於 System.Windows.Forms.Control.InvokeMarshaledCallbackDo(ThreadMethodEntry tme)
+   於 System.Windows.Forms.Control.InvokeMarshaledCallbackHelper(Object obj)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Windows.Forms.Control.InvokeMarshaledCallback(ThreadMethodEntry tme)
+   於 System.Windows.Forms.Control.InvokeMarshaledCallbacks()
+   於 System.Windows.Forms.Control.WndProc(Message& m)
+   於 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   於 System.Windows.Forms.Form.WndProc(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.Run(Form mainForm)
+   於 ADSW11000.Program.Main() 於 d:\ADSW11000\ADSW11000\Program.cs: 行 652
+   於 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   於 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   於 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   於 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Threading.ThreadHelper.ThreadStart()
+---------------------------------------------------------
+發生應用線程未處理的異常：2021/4/13 下午 03:42:26
+Application UnhandledException:並未將物件參考設定為物件的執行個體。;
+堆棧追蹤:   於 ADSW11000.MainF3.tmUIRefresh_Tick(Object sender, EventArgs e) 於 d:\ADSW11000\ADSW11000\MainF3.cs: 行 1446
+   於 System.Windows.Forms.Timer.OnTick(EventArgs e)
+   於 System.Windows.Forms.Timer.TimerNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.RunDialog(Form form)
+   於 System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   於 System.Windows.Forms.Form.ShowDialog()
+   於 ADSW11000.MainF3.UserLogin() 於 d:\ADSW11000\ADSW11000\MainF3.cs: 行 741
+   於 ADSW11000.MainF3.MainF1_Shown(Object sender, EventArgs e) 於 d:\ADSW11000\ADSW11000\MainF3.cs: 行 654
+   於 System.Windows.Forms.Form.OnShown(EventArgs e)
+   於 System.Windows.Forms.Form.CallShownEvent()
+   於 System.Windows.Forms.Control.InvokeMarshaledCallbackDo(ThreadMethodEntry tme)
+   於 System.Windows.Forms.Control.InvokeMarshaledCallbackHelper(Object obj)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Windows.Forms.Control.InvokeMarshaledCallback(ThreadMethodEntry tme)
+   於 System.Windows.Forms.Control.InvokeMarshaledCallbacks()
+   於 System.Windows.Forms.Control.WndProc(Message& m)
+   於 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   於 System.Windows.Forms.Form.WndProc(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.Run(Form mainForm)
+   於 ADSW11000.Program.Main() 於 d:\ADSW11000\ADSW11000\Program.cs: 行 652
+   於 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   於 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   於 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   於 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Threading.ThreadHelper.ThreadStart()
+---------------------------------------------------------
+發生應用線程未處理的異常：2021/4/15 下午 04:20:07
+Application UnhandledException:並未將物件參考設定為物件的執行個體。;
+堆棧追蹤:   於 ADSW11000.MainF3.tmUIRefresh_Tick(Object sender, EventArgs e) 於 d:\ADSW11000\ADSW11000\MainF3.cs: 行 1446
+   於 System.Windows.Forms.Timer.OnTick(EventArgs e)
+   於 System.Windows.Forms.Timer.TimerNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.RunDialog(Form form)
+   於 System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   於 System.Windows.Forms.Form.ShowDialog()
+   於 ADSW11000.MainF3.UserLogin() 於 d:\ADSW11000\ADSW11000\MainF3.cs: 行 741
+   於 ADSW11000.MainF3.MainF1_Shown(Object sender, EventArgs e) 於 d:\ADSW11000\ADSW11000\MainF3.cs: 行 654
+   於 System.Windows.Forms.Form.OnShown(EventArgs e)
+   於 System.Windows.Forms.Form.CallShownEvent()
+   於 System.Windows.Forms.Control.InvokeMarshaledCallbackDo(ThreadMethodEntry tme)
+   於 System.Windows.Forms.Control.InvokeMarshaledCallbackHelper(Object obj)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Windows.Forms.Control.InvokeMarshaledCallback(ThreadMethodEntry tme)
+   於 System.Windows.Forms.Control.InvokeMarshaledCallbacks()
+   於 System.Windows.Forms.Control.WndProc(Message& m)
+   於 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   於 System.Windows.Forms.Form.WndProc(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.Run(Form mainForm)
+   於 ADSW11000.Program.Main() 於 d:\ADSW11000\ADSW11000\Program.cs: 行 652
+   於 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   於 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   於 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   於 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Threading.ThreadHelper.ThreadStart()
+---------------------------------------------------------
+發生應用線程未處理的異常：2021/4/17 下午 01:40:18
+Application UnhandledException:值不能為 null。
+參數名稱: path;
+堆棧追蹤:   於 System.IO.Directory.CreateDirectory(String path)
+   於 ADSW11000.BasePackageF.RefreshFile() 於 d:\ADSW11000\ADSW11000\Kernal\BasePackageF.cs: 行 386
+   於 ADSW11000.BasePackageF.set_FindPackage(String value) 於 d:\ADSW11000\ADSW11000\Kernal\BasePackageF.cs: 行 107
+   於 ADSW11000.BasePackageF.button3_Click(Object sender, EventArgs e) 於 d:\ADSW11000\ADSW11000\Kernal\BasePackageF.cs: 行 677
+   於 System.Windows.Forms.Control.OnClick(EventArgs e)
+   於 System.Windows.Forms.Button.OnClick(EventArgs e)
+   於 System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   於 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   於 System.Windows.Forms.Control.WndProc(Message& m)
+   於 System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   於 System.Windows.Forms.Button.WndProc(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.Run(Form mainForm)
+   於 ADSW11000.Program.Main() 於 d:\ADSW11000\ADSW11000\Program.cs: 行 652
+   於 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   於 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   於 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   於 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Threading.ThreadHelper.ThreadStart()
+---------------------------------------------------------
+發生應用線程未處理的異常：2021/4/21 下午 03:50:01
+Application UnhandledException:拒絕存取路徑 'D:\ADSW11000\ADSW11000\bin\LocalData\Package\12x12\._Kinsus.xml'。;
+堆棧追蹤:   於 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   於 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   於 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   於 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean useAsync)
+   於 System.Xml.XmlWriterSettings.CreateWriter(String outputFileName)
+   於 System.Xml.XmlWriter.Create(String outputFileName, XmlWriterSettings settings)
+   於 System.Xml.Linq.XDocument.Save(String fileName, SaveOptions options)
+   於 System.Xml.Linq.XDocument.Save(String fileName)
+   於 KCSDK.DataManagement.SaveFile(String SaveAsName) 於 d:\ADSW11000\ProVDLL\KCSDK\KCSDK\資料控件\DataManagement.cs: 行 618
+   於 KCSDK.DataManagement.SetLastTime() 於 d:\ADSW11000\ProVDLL\KCSDK\KCSDK\資料控件\DataManagement.cs: 行 710
+   於 ADSW11000.BasePackageExF.SetLastTime() 於 d:\ADSW11000\ADSW11000\Kernal\BasePackageExF.cs: 行 211
+   於 ADSW11000.PackageSelectExF.btnOk_Click(Object sender, EventArgs e) 於 d:\ADSW11000\ADSW11000\FormSet\PackageSelectExF.cs: 行 243
+   於 System.Windows.Forms.Control.OnClick(EventArgs e)
+   於 System.Windows.Forms.Button.OnClick(EventArgs e)
+   於 System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   於 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   於 System.Windows.Forms.Control.WndProc(Message& m)
+   於 System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   於 System.Windows.Forms.Button.WndProc(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.Run(Form mainForm)
+   於 ADSW11000.Program.Main() 於 d:\ADSW11000\ADSW11000\Program.cs: 行 652
+   於 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   於 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   於 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   於 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Threading.ThreadHelper.ThreadStart()
+---------------------------------------------------------
+發生應用線程未處理的異常：2021/4/21 下午 08:55:00
+Application UnhandledException:拒絕存取路徑 'D:\ADSW11000\ADSW11000\bin\LocalData\Package\12x12\._Kinsus.xml'。;
+堆棧追蹤:   於 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   於 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   於 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   於 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean useAsync)
+   於 System.Xml.XmlWriterSettings.CreateWriter(String outputFileName)
+   於 System.Xml.XmlWriter.Create(String outputFileName, XmlWriterSettings settings)
+   於 System.Xml.Linq.XDocument.Save(String fileName, SaveOptions options)
+   於 System.Xml.Linq.XDocument.Save(String fileName)
+   於 KCSDK.DataManagement.SaveFile(String SaveAsName) 於 d:\ADSW11000\ProVDLL\KCSDK\KCSDK\資料控件\DataManagement.cs: 行 618
+   於 ADSW11000.BasePackageExF.btnSave_Click(Object sender, EventArgs e) 於 d:\ADSW11000\ADSW11000\Kernal\BasePackageExF.cs: 行 861
+   於 System.EventHandler.Invoke(Object sender, EventArgs e)
+   於 System.Windows.Forms.Control.OnClick(EventArgs e)
+   於 System.Windows.Forms.Button.OnClick(EventArgs e)
+   於 System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   於 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   於 System.Windows.Forms.Control.WndProc(Message& m)
+   於 System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   於 System.Windows.Forms.Button.WndProc(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.Run(Form mainForm)
+   於 ADSW11000.Program.Main() 於 d:\ADSW11000\ADSW11000\Program.cs: 行 652
+   於 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   於 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   於 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   於 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Threading.ThreadHelper.ThreadStart()
+---------------------------------------------------------
+發生應用線程未處理的異常：2021/4/26 上午 07:56:32
+Application UnhandledException:並未將物件參考設定為物件的執行個體。;
+堆棧追蹤:   於 ADSW11000.MainF3.tmUIRefresh_Tick(Object sender, EventArgs e) 於 d:\ADSW11000\ADSW11000\MainF3.cs: 行 1446
+   於 System.Windows.Forms.Timer.OnTick(EventArgs e)
+   於 System.Windows.Forms.Timer.TimerNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.RunDialog(Form form)
+   於 System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   於 System.Windows.Forms.Form.ShowDialog()
+   於 ADSW11000.MainF3.UserLogin() 於 d:\ADSW11000\ADSW11000\MainF3.cs: 行 741
+   於 ADSW11000.MainF3.MainF1_Shown(Object sender, EventArgs e) 於 d:\ADSW11000\ADSW11000\MainF3.cs: 行 654
+   於 System.Windows.Forms.Form.OnShown(EventArgs e)
+   於 System.Windows.Forms.Form.CallShownEvent()
+   於 System.Windows.Forms.Control.InvokeMarshaledCallbackDo(ThreadMethodEntry tme)
+   於 System.Windows.Forms.Control.InvokeMarshaledCallbackHelper(Object obj)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Windows.Forms.Control.InvokeMarshaledCallback(ThreadMethodEntry tme)
+   於 System.Windows.Forms.Control.InvokeMarshaledCallbacks()
+   於 System.Windows.Forms.Control.WndProc(Message& m)
+   於 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   於 System.Windows.Forms.Form.WndProc(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.Run(Form mainForm)
+   於 ADSW11000.Program.Main() 於 d:\ADSW11000\ADSW11000\Program.cs: 行 652
+   於 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   於 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   於 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   於 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Threading.ThreadHelper.ThreadStart()
+---------------------------------------------------------
+發生應用線程未處理的異常：2013/1/10 下午 12:25:04
+Application UnhandledException:並未將物件參考設定為物件的執行個體。;
+堆棧追蹤:   於 System.Windows.Forms.Control.get_Enabled()
+   於 System.Windows.Forms.Control.get_Enabled()
+   於 System.Windows.Forms.Control.get_Enabled()
+   於 System.Windows.Forms.Control.get_Enabled()
+   於 System.Windows.Forms.Control.get_Enabled()
+   於 ProVLib.TObjForm.ObjFormFreshIO() 於 d:\ADSW11000_W\ProVDLL\ProVLib\ObjForm.cs: 行 309
+   於 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Threading.ThreadHelper.ThreadStart()
+---------------------------------------------------------
+發生應用線程未處理的異常：2021/10/27 下午 03:23:53
+Application UnhandledException:跨執行緒作業無效: 存取控制項 'lblTitle' 時所使用的執行緒與建立控制項的執行緒不同。;
+堆棧追蹤:   於 System.Windows.Forms.Control.get_Handle()
+   於 System.Windows.Forms.Control.set_WindowText(String value)
+   於 System.Windows.Forms.Control.set_Text(String value)
+   於 System.Windows.Forms.Label.set_Text(String value)
+   於 CommonObj.dia_Message.ShowDialog(enMsgDialogType type, String strTitle, String strMessage, String strLang, String strOkBtnText, String strCancelText) 於 d:\ADSW11000_W\CommonObj\dia_Message.cs: 行 51
+   於 ADSW11000.MainF3.btnExit_Click(Object sender, EventArgs e) 於 d:\ADSW11000\ADSW11000\MainF3.cs: 行 2167
+   於 System.Windows.Forms.Control.OnClick(EventArgs e)
+   於 System.Windows.Forms.Button.OnClick(EventArgs e)
+   於 System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   於 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   於 System.Windows.Forms.Control.WndProc(Message& m)
+   於 System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   於 System.Windows.Forms.Button.WndProc(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.Run(Form mainForm)
+   於 ADSW11000.Program.Main() 於 d:\ADSW11000\ADSW11000\Program.cs: 行 652
+   於 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   於 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   於 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   於 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Threading.ThreadHelper.ThreadStart()
+---------------------------------------------------------
+發生應用線程未處理的異常：2021/10/28 上午 11:30:53
+Application UnhandledException:無法載入 DLL 'ADVMOT.dll': 找不到指定的模組。 (發生例外狀況於 HRESULT: 0x8007007E);
+堆棧追蹤:   於 Advantech.Motion.Motion.mAcm_DaqDoGetBitEx(IntPtr DeviceHandle, UInt16 RingNo, UInt16 SlaveIP, UInt16 DoChannel, Byte& BitData)
+   於 ProVLib.IOAdvECATObj.In() 於 d:\ADSW11000_W\ProVDLL\ProVLib\IOAdvECATObj.cs: 行 58
+   於 ProVLib.OutBit.ObjInit(Int32 IsSimulation) 於 d:\ADSW11000_W\ProVDLL\ProVLib\OutBit.cs: 行 537
+   於 ProVLib.TObjForm.ObjFormInit(Int32 isSimulation) 於 d:\ADSW11000_W\ProVDLL\ProVLib\ObjForm.cs: 行 113
+   於 ADSW11000.Program.Main() 於 d:\ADSW11000_FFT\ADSW11000\Program.cs: 行 508
+   於 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   於 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   於 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   於 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Threading.ThreadHelper.ThreadStart()
+---------------------------------------------------------
+發生應用線程未處理的異常：2021/11/4 上午 10:55:04
+Application UnhandledException:值不能為 null。
+參數名稱: value;
+堆棧追蹤:   於 System.Xml.Linq.XAttribute..ctor(XName name, Object value)
+   於 KCSDK.DataManagement.SaveFile(String SaveAsName) 於 e:\ADSW11000_W\ProVDLL\KCSDK\KCSDK\資料控件\DataManagement.cs: 行 598
+   於 ADSW11000.SYSPara.PSetValue(String FieldName, Object value) 於 d:\WorkSpace\temp2\ADSW11000_W\ADSW11000\SysDefine.cs: 行 471
+   於 ADSW11000.PackageExF.btnAdd_Click(Object sender, EventArgs e) 於 d:\WorkSpace\temp2\ADSW11000_W\ADSW11000\User(使用者修改)\PackageExF.cs: 行 1009
+   於 System.EventHandler.Invoke(Object sender, EventArgs e)
+   於 System.Windows.Forms.Control.OnClick(EventArgs e)
+   於 System.Windows.Forms.Button.OnClick(EventArgs e)
+   於 System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   於 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   於 System.Windows.Forms.Control.WndProc(Message& m)
+   於 System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   於 System.Windows.Forms.Button.WndProc(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.Run(Form mainForm)
+   於 ADSW11000.Program.Main() 於 d:\WorkSpace\temp2\ADSW11000_W\ADSW11000\Program.cs: 行 652
+   於 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   於 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   於 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   於 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Threading.ThreadHelper.ThreadStart()
+---------------------------------------------------------
+發生應用線程未處理的異常：2021/11/4 下午 02:24:53
+Application UnhandledException:值不能為 null。
+參數名稱: value;
+堆棧追蹤:   於 System.Xml.Linq.XAttribute..ctor(XName name, Object value)
+   於 KCSDK.DataManagement.SaveFile(String SaveAsName) 於 e:\ADSW11000_W\ProVDLL\KCSDK\KCSDK\資料控件\DataManagement.cs: 行 598
+   於 ADSW11000.SYSPara.PSetValue(String FieldName, Object value) 於 d:\WorkSpace\temp2\ADSW11000_W\ADSW11000\SysDefine.cs: 行 471
+   於 ADSW11000.PackageExF.btnAdd_Click(Object sender, EventArgs e) 於 d:\WorkSpace\temp2\ADSW11000_W\ADSW11000\User(使用者修改)\PackageExF.cs: 行 1009
+   於 System.EventHandler.Invoke(Object sender, EventArgs e)
+   於 System.Windows.Forms.Control.OnClick(EventArgs e)
+   於 System.Windows.Forms.Button.OnClick(EventArgs e)
+   於 System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   於 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   於 System.Windows.Forms.Control.WndProc(Message& m)
+   於 System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   於 System.Windows.Forms.Button.WndProc(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.Run(Form mainForm)
+   於 ADSW11000.Program.Main() 於 d:\WorkSpace\temp2\ADSW11000_W\ADSW11000\Program.cs: 行 652
+   於 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   於 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   於 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   於 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Threading.ThreadHelper.ThreadStart()
+---------------------------------------------------------
+發生應用線程未處理的異常：2021/11/4 下午 03:21:20
+Application UnhandledException:值不能為 null。
+參數名稱: value;
+堆棧追蹤:   於 System.Xml.Linq.XAttribute..ctor(XName name, Object value)
+   於 KCSDK.DataManagement.SaveFile(String SaveAsName) 於 e:\ADSW11000_W\ProVDLL\KCSDK\KCSDK\資料控件\DataManagement.cs: 行 598
+   於 ADSW11000.SYSPara.PSetValue(String FieldName, Object value) 於 d:\WorkSpace\temp2\ADSW11000_W\ADSW11000\SysDefine.cs: 行 471
+   於 ADSW11000.PackageExF.btnAdd_Click(Object sender, EventArgs e) 於 d:\WorkSpace\temp2\ADSW11000_W\ADSW11000\User(使用者修改)\PackageExF.cs: 行 1009
+   於 System.EventHandler.Invoke(Object sender, EventArgs e)
+   於 System.Windows.Forms.Control.OnClick(EventArgs e)
+   於 System.Windows.Forms.Button.OnClick(EventArgs e)
+   於 System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   於 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   於 System.Windows.Forms.Control.WndProc(Message& m)
+   於 System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   於 System.Windows.Forms.Button.WndProc(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.Run(Form mainForm)
+   於 ADSW11000.Program.Main() 於 d:\WorkSpace\temp2\ADSW11000_W\ADSW11000\Program.cs: 行 652
+   於 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   於 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   於 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   於 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Threading.ThreadHelper.ThreadStart()
+---------------------------------------------------------
+發生應用線程未處理的異常：2021/11/4 下午 03:22:37
+Application UnhandledException:值不能為 null。
+參數名稱: value;
+堆棧追蹤:   於 System.Xml.Linq.XAttribute..ctor(XName name, Object value)
+   於 KCSDK.DataManagement.SaveFile(String SaveAsName) 於 e:\ADSW11000_W\ProVDLL\KCSDK\KCSDK\資料控件\DataManagement.cs: 行 598
+   於 ADSW11000.SYSPara.PSetValue(String FieldName, Object value) 於 d:\WorkSpace\temp2\ADSW11000_W\ADSW11000\SysDefine.cs: 行 471
+   於 ADSW11000.PackageExF.btnAdd_Click(Object sender, EventArgs e) 於 d:\WorkSpace\temp2\ADSW11000_W\ADSW11000\User(使用者修改)\PackageExF.cs: 行 1009
+   於 System.EventHandler.Invoke(Object sender, EventArgs e)
+   於 System.Windows.Forms.Control.OnClick(EventArgs e)
+   於 System.Windows.Forms.Button.OnClick(EventArgs e)
+   於 System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   於 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   於 System.Windows.Forms.Control.WndProc(Message& m)
+   於 System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   於 System.Windows.Forms.Button.WndProc(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.Run(Form mainForm)
+   於 ADSW11000.Program.Main() 於 d:\WorkSpace\temp2\ADSW11000_W\ADSW11000\Program.cs: 行 652
+   於 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   於 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   於 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   於 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Threading.ThreadHelper.ThreadStart()
+---------------------------------------------------------
+發生應用線程未處理的異常：2021/11/4 下午 03:24:35
+Application UnhandledException:值不能為 null。
+參數名稱: value;
+堆棧追蹤:   於 System.Xml.Linq.XAttribute..ctor(XName name, Object value)
+   於 KCSDK.DataManagement.SaveFile(String SaveAsName) 於 e:\ADSW11000_W\ProVDLL\KCSDK\KCSDK\資料控件\DataManagement.cs: 行 598
+   於 ADSW11000.SYSPara.PSetValue(String FieldName, Object value)
+   於 ADSW11000.PackageExF.btnAdd_Click(Object sender, EventArgs e)
+   於 System.EventHandler.Invoke(Object sender, EventArgs e)
+   於 System.Windows.Forms.Control.OnClick(EventArgs e)
+   於 System.Windows.Forms.Button.OnClick(EventArgs e)
+   於 System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   於 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   於 System.Windows.Forms.Control.WndProc(Message& m)
+   於 System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   於 System.Windows.Forms.Button.WndProc(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.Run(Form mainForm)
+   於 ADSW11000.Program.Main()
+   於 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   於 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   於 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   於 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Threading.ThreadHelper.ThreadStart()
+---------------------------------------------------------
+發生應用線程未處理的異常：2021/11/4 下午 03:26:11
+Application UnhandledException:值不能為 null。
+參數名稱: value;
+堆棧追蹤:   於 System.Xml.Linq.XAttribute..ctor(XName name, Object value)
+   於 KCSDK.DataManagement.SaveFile(String SaveAsName) 於 e:\ADSW11000_W\ProVDLL\KCSDK\KCSDK\資料控件\DataManagement.cs: 行 598
+   於 ADSW11000.SYSPara.PSetValue(String FieldName, Object value)
+   於 ADSW11000.PackageExF.btnAdd_Click(Object sender, EventArgs e)
+   於 System.EventHandler.Invoke(Object sender, EventArgs e)
+   於 System.Windows.Forms.Control.OnClick(EventArgs e)
+   於 System.Windows.Forms.Button.OnClick(EventArgs e)
+   於 System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   於 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   於 System.Windows.Forms.Control.WndProc(Message& m)
+   於 System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   於 System.Windows.Forms.Button.WndProc(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.Run(Form mainForm)
+   於 ADSW11000.Program.Main()
+   於 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   於 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   於 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   於 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Threading.ThreadHelper.ThreadStart()
+---------------------------------------------------------
+發生應用線程未處理的異常：2021/11/4 下午 03:26:24
+Application UnhandledException:值不能為 null。
+參數名稱: value;
+堆棧追蹤:   於 System.Xml.Linq.XAttribute..ctor(XName name, Object value)
+   於 KCSDK.DataManagement.SaveFile(String SaveAsName) 於 e:\ADSW11000_W\ProVDLL\KCSDK\KCSDK\資料控件\DataManagement.cs: 行 598
+   於 ADSW11000.SYSPara.PSetValue(String FieldName, Object value)
+   於 ADSW11000.PackageExF.btnAdd_Click(Object sender, EventArgs e)
+   於 System.EventHandler.Invoke(Object sender, EventArgs e)
+   於 System.Windows.Forms.Control.OnClick(EventArgs e)
+   於 System.Windows.Forms.Button.OnClick(EventArgs e)
+   於 System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   於 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   於 System.Windows.Forms.Control.WndProc(Message& m)
+   於 System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   於 System.Windows.Forms.Button.WndProc(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.Run(Form mainForm)
+   於 ADSW11000.Program.Main()
+   於 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   於 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   於 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   於 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Threading.ThreadHelper.ThreadStart()
+---------------------------------------------------------
+發生應用線程未處理的異常：2021/11/4 下午 03:26:54
+Application UnhandledException:值不能為 null。
+參數名稱: value;
+堆棧追蹤:   於 System.Xml.Linq.XAttribute..ctor(XName name, Object value)
+   於 KCSDK.DataManagement.SaveFile(String SaveAsName) 於 e:\ADSW11000_W\ProVDLL\KCSDK\KCSDK\資料控件\DataManagement.cs: 行 598
+   於 ADSW11000.SYSPara.PSetValue(String FieldName, Object value)
+   於 ADSW11000.PackageExF.btnAdd_Click(Object sender, EventArgs e)
+   於 System.EventHandler.Invoke(Object sender, EventArgs e)
+   於 System.Windows.Forms.Control.OnClick(EventArgs e)
+   於 System.Windows.Forms.Button.OnClick(EventArgs e)
+   於 System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   於 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   於 System.Windows.Forms.Control.WndProc(Message& m)
+   於 System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   於 System.Windows.Forms.Button.WndProc(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   於 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.Run(Form mainForm)
+   於 ADSW11000.Program.Main()
+   於 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   於 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   於 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   於 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Threading.ThreadHelper.ThreadStart()
+---------------------------------------------------------
+發生應用線程未處理的異常：2021/12/1 上午 11:22:46
+Application UnhandledException:並未將物件參考設定為物件的執行個體。;
+堆棧追蹤:   於 ADSW11000.CutLineSimulate.SingleStep() 於 d:\ADSW11000_W_98\ADSW11000\User(使用者修改)\CutLineSimulate.cs: 行 474
+   於 ADSW11000.CutLineSimulate.timer_Tick(Object sender, EventArgs e) 於 d:\ADSW11000_W_98\ADSW11000\User(使用者修改)\CutLineSimulate.cs: 行 605
+   於 System.Windows.Forms.Timer.OnTick(EventArgs e)
+   於 System.Windows.Forms.Timer.TimerNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.Run(Form mainForm)
+   於 ADSW11000.Program.Main() 於 d:\ADSW11000_W_98\ADSW11000\Program.cs: 行 652
+   於 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   於 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   於 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   於 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Threading.ThreadHelper.ThreadStart()
+---------------------------------------------------------
+發生應用線程未處理的異常：2021/12/1 上午 11:24:33
+Application UnhandledException:並未將物件參考設定為物件的執行個體。;
+堆棧追蹤:   於 ADSW11000.CutLineSimulate.SingleStep() 於 d:\ADSW11000_W_98\ADSW11000\User(使用者修改)\CutLineSimulate.cs: 行 474
+   於 ADSW11000.CutLineSimulate.timer_Tick(Object sender, EventArgs e) 於 d:\ADSW11000_W_98\ADSW11000\User(使用者修改)\CutLineSimulate.cs: 行 605
+   於 System.Windows.Forms.Timer.OnTick(EventArgs e)
+   於 System.Windows.Forms.Timer.TimerNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.Run(Form mainForm)
+   於 ADSW11000.Program.Main() 於 d:\ADSW11000_W_98\ADSW11000\Program.cs: 行 652
+   於 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   於 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   於 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   於 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Threading.ThreadHelper.ThreadStart()
+---------------------------------------------------------
+發生應用線程未處理的異常：2021/12/1 上午 11:25:25
+Application UnhandledException:並未將物件參考設定為物件的執行個體。;
+堆棧追蹤:   於 ADSW11000.CutLineSimulate.SingleStep() 於 d:\ADSW11000_W_98\ADSW11000\User(使用者修改)\CutLineSimulate.cs: 行 474
+   於 ADSW11000.CutLineSimulate.timer_Tick(Object sender, EventArgs e) 於 d:\ADSW11000_W_98\ADSW11000\User(使用者修改)\CutLineSimulate.cs: 行 605
+   於 System.Windows.Forms.Timer.OnTick(EventArgs e)
+   於 System.Windows.Forms.Timer.TimerNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.Run(Form mainForm)
+   於 ADSW11000.Program.Main() 於 d:\ADSW11000_W_98\ADSW11000\Program.cs: 行 652
+   於 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   於 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   於 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   於 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Threading.ThreadHelper.ThreadStart()
+---------------------------------------------------------
+發生應用線程未處理的異常：2021/12/1 上午 11:34:47
+Application UnhandledException:並未將物件參考設定為物件的執行個體。;
+堆棧追蹤:   於 ADSW11000.CutLineSimulate.SingleStep()
+   於 ADSW11000.CutLineSimulate.timer_Tick(Object sender, EventArgs e)
+   於 System.Windows.Forms.Timer.OnTick(EventArgs e)
+   於 System.Windows.Forms.Timer.TimerNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.Run(Form mainForm)
+   於 ADSW11000.Program.Main()
+   於 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   於 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   於 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   於 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Threading.ThreadHelper.ThreadStart()
+---------------------------------------------------------
+發生應用線程未處理的異常：2021/12/1 上午 11:34:57
+Application UnhandledException:並未將物件參考設定為物件的執行個體。;
+堆棧追蹤:   於 ADSW11000.CutLineSimulate.SingleStep()
+   於 ADSW11000.CutLineSimulate.timer_Tick(Object sender, EventArgs e)
+   於 System.Windows.Forms.Timer.OnTick(EventArgs e)
+   於 System.Windows.Forms.Timer.TimerNativeWindow.WndProc(Message& m)
+   於 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   於 System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   於 System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   於 System.Windows.Forms.Application.Run(Form mainForm)
+   於 ADSW11000.Program.Main()
+   於 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   於 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   於 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   於 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   於 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   於 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   於 System.Threading.ThreadHelper.ThreadStart()
+---------------------------------------------------------

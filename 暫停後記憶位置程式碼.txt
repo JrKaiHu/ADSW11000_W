@@ -1,0 +1,601 @@
+
+HDT、FlipIC\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+須注意PausePPNeedToContinue
+
+
+MAG\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+宣告---------------------------------------------------------------------------------------------
+
+int PreStoreStep = 0;
+
+AlwaysRun---------------------------------------------------------------------------------------------
+
+switch (PreStoreStep)
+            {
+                case 0:
+                    break;
+                case 10:
+                    bool OK = true;
+                    foreach (Motor item in MotorList)
+                    {
+                        if (item.Busy())
+                            OK = false;
+                    }
+                    if (OK)
+                        PreStoreStep = 20;
+                    break;
+                case 20:
+                    StoreMotorPos();
+                    PreStoreStep = 0;
+                    break;   
+            }
+
+HomeReset---------------------------------------------------------------------------------------------
+
+PreStoreStep = 0;
+            NeedCompareMotorPos = false;
+            if (IsSimulation() != 0)
+            {
+                foreach (Motor item in MotorList)
+                {
+                    item.GearRatio = 1;
+                    item.EncGearRatio = 1;
+                }
+            }
+
+函數---------------------------------------------------------------------------------------------
+
+public void SetPreStoreStep()
+        { PreStoreStep = 10; }
+
+
+ #region 馬達檢查
+
+        private bool NeedCompareMotorPos;
+        private int[] MotorTempPos;
+
+
+        public void StoreMotorPos()
+        {
+            NeedCompareMotorPos = true;
+            Array.Resize(ref MotorTempPos, MotorList.Count);
+            for (int i = 0, j = 0; i < MotorList.Count; i++)
+            {
+                if (MotorList[i].Enabled)
+                {
+                    MotorTempPos[j] = MotorList[i].ReadEncPos();
+                    j++;
+                }
+            }
+        }
+
+        public void SetNeedCompareMotorPos()
+        { NeedCompareMotorPos = false; }
+
+        public bool CompareMotorPos()
+        {
+            if (!NeedCompareMotorPos)
+                return true;
+            bool AllOk = true;
+            for (int i = 0, j = 0; i < MotorList.Count; i++)
+            {
+                if (MotorList[i].Enabled)
+                {
+                    bool OK = (MotorTempPos[j] + 20) >= MotorList[i].ReadEncPos();
+                    OK &= (MotorTempPos[j] - 20) <= MotorList[i].ReadEncPos();
+                    if (!OK)
+                    {
+                        ShowAlarm("W", 28, MotorList[i].Name, MotorTempPos[j]);
+                        AllOk = false;
+                    }
+                    j++;
+                }
+            }
+            return AllOk;
+        }
+        #endregion
+
+流程---------------------------------------------------------------------------------------------
+
+case 100:
+                    eForceCassetteOut = EnumManualState.Manualing;
+
+                    if (FullCST)
+                        ShowAlarm("i", 25);
+                    else
+                        FC_UnloadCST.MainRun();
+                    if (ActionOk)
+                    {
+                        bOK = true;
+                        bIsCassetteReady = false;
+                        bForceCassetteOut = true;//強制退框變數
+                        eForceCassetteOut = EnumManualState.ManualOK;
+                        iManualForceCassetteOut = 0;
+                        SetPreStoreStep();
+                    }
+                    break;
+
+宣告---------------------------------------------------------------------------------------------
+宣告---------------------------------------------------------------------------------------------
+
+
+
+Manflow\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+宣告---------------------------------------------------------------------------------------------
+
+ #region 檢查馬達位置
+
+        public bool TrayOutNeedStore = false;
+        public bool MagOutNeedStore = false;
+        public bool StoreFinish = true;
+        public bool PauseActionStore = false;//透過暫停按鈕觸發
+        public MyTimer TimerStoreMotorPos = new MyTimer(false);
+        bool Store = true;
+        public bool PassMotorPosCheck =false;
+
+        #endregion
+
+AlwaysRun---------------------------------------------------------------------------------------------
+
+#region 馬達位置記憶功能
+            if (SYSPara.PackageName != "")
+            {
+                #region 退出綠燈時記憶
+                if (SYSPara.SysState == StateMode.SM_AUTO_RUN)
+                {
+                    StoreFinish = false;     
+                    Store = true;
+                    TimerStoreMotorPos.Restart();
+                }
+                else if (Store)
+                {
+                    if (TimerStoreMotorPos.On(1000))
+                    {
+                        foreach (BaseModuleInterface module in FormSet.ModuleList)
+                        {
+                            bool moduleName = module.Name != "MAA" && module.Name != "SAW" &&
+                                 module.Name != "FlipTray" && module.Name != "FlipIC" &&
+                                 module.Name != "WCL";
+                            if (moduleName)
+                            {
+                                if (module.Name == "HDTB")
+                                    CallProc(module.Name, "StoreMotorPos", HDTBPausePPNeedToContinue);
+                                else if (module.Name == "HDTF")
+                                    CallProc(module.Name, "StoreMotorPos", HDTFPausePPNeedToContinue);
+                                else
+                                {
+                                    CallProc(module.Name, "StoreMotorPos");
+                                }
+                            }
+                        }
+                        PassMotorPosCheck = false;
+                        Store = false;
+                        StoreFinish = true;
+                    }
+                }
+                #endregion      
+            }
+            #endregion 馬達位置記憶功能
+
+HomeReset---------------------------------------------------------------------------------------------
+
+PassMotorPosCheck = false;
+            StoreFinish = true;
+            bManualForceTrayOutStart = false;
+            MagOutNeedStore = false;
+            TrayOutNeedStore = false;
+
+私有函數---------------------------------------------------------------------------------------------
+
+ public bool CheckAllMotorPos()
+        {
+            if (!OReadValue("CheckMotorPos").ToBoolean())
+                return true;
+            bool Ok = true;
+            foreach (BaseModuleInterface module in FormSet.ModuleList)
+            {
+                bool moduleName = module.Name != "MAA" && module.Name != "SAW" &&
+                    module.Name != "FlipTray" && module.Name != "FlipIC" &&
+                    module.Name != "WCL";
+                if (moduleName)
+                {
+                    if (!(bool)CallProc(module.Name, "CompareMotorPos"))
+                        Ok = false;
+                }
+            }
+            return Ok;
+        }
+
+流程---------------------------------------------------------------------------------------------
+
+private FlowChart.FCRESULT flowChart39_Run()
+        {
+            FC_TrayOut.MainRun();
+            if (bTrayOut)
+            {
+                ShowAlarm("I", 1034);//手動排盤完成
+                bTrayOut = false;//清盤流程完成
+                bManualForceTrayOutStart = false;//實體按鈕,Inspection
+                CallProc("MAA", "SetInspection", false);//開關實體按鈕燈
+                if(SYSPara.FlipType==0)
+                    CallProc("TTM", "MForceTrayoutStart", false);
+
+                CallProc("Tray", "SetPreStoreStep");
+                CallProc("TTM", "SetPreStoreStep");
+
+                FC_ManualTrayOut.TaskReset();
+                FC_TrayOut.TaskReset();
+            }
+            return default(FlowChart.FCRESULT);
+        }
+
+
+MF3\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+手動操作事件------------------------------------------------------------------------------------
+
+if (FormSet.mMainFlow.TrayOutNeedStore)
+                    {
+                        FormSet.mMSS.CallProc("Tray", "SetPreStoreStep");
+                        FormSet.mMSS.CallProc("TTM", "SetPreStoreStep");
+                        FormSet.mMainFlow.TrayOutNeedStore = false;
+                        FormSet.mMainFlow.PassMotorPosCheck = false;
+                    }
+                    if (FormSet.mMainFlow.MagOutNeedStore)
+                    {
+                        FormSet.mMSS.CallProc("MAG", "SetPreStoreStep");
+                        FormSet.mMainFlow.MagOutNeedStore = false;
+                        FormSet.mMainFlow.PassMotorPosCheck = false;
+                    }
+
+
+AfterShowAlarm------------------------------------------------------------------------------------
+
+ //if (armMtrl.Explain.IndexOf("驅動器故障", 0) != -1)
+            //{
+            //    string[] s = new string[2];
+            //    s = armMtrl.Explain.Split('[', ']');
+            //    if (FormSet.mMainFlow.OReadValue("MotorError").ToBoolean())
+            //        FormSet.mMSS.CallProc(armMtrl.Module, "CheackMotor", s[1]);
+            //}
+            if (armMtrl.Explain.IndexOf("安全門", 0) != -1 && armMtrl.Explain.IndexOf("偵測打開", 0) != -1)
+            {
+                FormSet.mMSS.CallProc("TTM", "StopForceTrayOut");
+                FormSet.mMSS.CallProc("Tray", "StopForceTrayOut");
+                if ((int)FormSet.mMSS.CallProc("MAG", "F3ManualState", "ForceCassetteOut") == 1)
+                {
+                    FormSet.mMSS.CallProc("MAG", "SetPauseToStop", true);
+                }
+            }
+
+開始------------------------------------------------------------------------------------
+
+private void btnStart_Click(object sender, EventArgs e)
+        {
+            if (!(bool)FormSet.mMSS.CallProc("MAA", "LockDoor", true))
+            {
+                SYSPara.Alarm.Say("i1081");
+                return;
+            }
+            else if (FormSet.mMainFlow.TrayLayoutTeaching)
+            {
+                SYSPara.Alarm.Say("i1077");
+                return;
+            }
+            else if (FormSet.mMainFlow.bManualForceTrayOutStart)
+            {
+                SYSPara.Alarm.Say("i1018");
+                return;
+            }
+            else if ((int)FormSet.mMSS.CallProc("MAG", "F3ManualState", "ForceCassetteOut") == 1)
+            {
+                SYSPara.Alarm.Say("W1101");
+                return;
+            }
+            else if (!FormSet.mMainFlow.StoreFinish && !SYSPara.SysRun)
+            {
+                SYSPara.Alarm.Say("W1102");
+                return;
+            }
+            else if (!SYSPara.SysRun && !FormSet.mMainFlow.CheckAllMotorPos() && !FormSet.mMainFlow.PassMotorPosCheck)
+            {
+                return;
+            }
+            else
+            {
+                FormSet.mMainFlow.PassMotorPosCheck = false;
+                SYSPara.LogSay(EnLoggerType.EnLog_OP, "使用者按下「生產開始」");
+                SYSPara.MusicOn = true;
+                SYSPara.ErrorStop = false;
+                SYSPara.Alarm.ClearAll();
+                if (SYSPara.RunMode == RunModeDT.AUTO && SYSPara.SysState != StateMode.SM_AUTO_RUN)
+                {
+                    Thread.Sleep(10);
+                    SYSPara.Alarm.Say("I1092");
+
+                }
+                SYSPara.SysRun = true;
+
+            }
+        }
+
+暫停按鈕------------------------------------------------------------------------------------
+
+ #region 設置模組暫停動作停止
+            if (FormSet.mMainFlow.bManualForceTrayOutStart || (int)FormSet.mMSS.CallProc("MAG", "F3ManualState", "ForceCassetteOut") == 1)
+            {
+                if (FormSet.mMainFlow.bManualForceTrayOutStart)
+                {
+                    FormSet.mMSS.CallProc("TTM", "MForceTrayoutStart", false);
+                    FormSet.mMSS.CallProc("Tray", "MForceTrayoutStart", false);                 
+                }
+                if ((int)FormSet.mMSS.CallProc("MAG", "F3ManualState", "ForceCassetteOut") == 1)
+                {
+                    FormSet.mMSS.CallProc("MAG", "SetPauseToStop", true);
+                }
+
+
+            }
+            #endregion
+
+強制退框------------------------------------------------------------------------------------
+
+private void chkForceCassetteOut_Click(object sender, EventArgs e)
+        {
+            操作紀錄MF3(sender);
+            //目前狀態不可執行手動功能
+            if (SYSPara.SysState != StateMode.SM_PAUSE)
+            {
+                ShowAlarm_CheckBoxState("I1032", chkForceCassetteOut, false);
+                return;
+            }
+
+            //MAG有板不可執行手動退框
+            if ((bool)FormSet.mMSS.CallProc("MAG", "HasPCB"))
+            {
+                ShowAlarm_CheckBoxState("I1033", chkForceCassetteOut, false);
+                return;
+            }
+
+            //推料手臂在前不可退框
+            if (!(bool)FormSet.mMSS.CallProc("MAG", "PushCyState",false))
+            {
+                ShowAlarm_CheckBoxState("i1050", chkForceCassetteOut, false);
+                return;
+            }
+            if (!FormSet.mMainFlow.StoreFinish)
+            {
+                SYSPara.Alarm.Say("W1102");
+                return;
+            }
+            if (!(bool)FormSet.mMSS.CallProc("MAG", "GetPauseToStop") && (int)FormSet.mMSS.CallProc("MAG", "F3ManualState", "ForceCassetteOut") == 1)
+            {
+                SYSPara.Alarm.Say("W1103");
+                return;
+            }
+            if (!FormSet.mMainFlow.CheckAllMotorPos() && !FormSet.mMainFlow.PassMotorPosCheck)
+            {
+                return;
+            }
+            //手動執行中,重新執行
+            if ((int)FormSet.mMSS.CallProc("MAG", "F3ManualState", "ForceCassetteOut") == 1)
+            {
+                FormSet.mMSS.CallProc("MAG", "SetNeedCompareMotorPos");
+                FormSet.mMainFlow.PassMotorPosCheck = false;
+                FormSet.mMainFlow.MagOutNeedStore = true;
+                FormSet.mMSS.CallProc("MAG", "SetPauseToStop", false);
+                chkForceCassetteOut.Checked = true;
+                return;
+            }
+
+            if ((bool)FormSet.mMSS.CallProc("MAG", "IsCassetteReady"))
+            {
+                FormSet.mMSS.CallProc("MAG", "SetNeedCompareMotorPos");
+                FormSet.mMainFlow.PassMotorPosCheck = false;
+                FormSet.mMainFlow.MagOutNeedStore = true;
+                FormSet.mMSS.CallProc("MAG", "F3ManualFun", 100);
+                chkForceCassetteOut.Checked = true;
+            }
+            else
+            {
+                MessageBox.Show("夾爪未夾框");
+                chkForceCassetteOut.Checked = false;
+            }
+        }
+
+手排盤------------------------------------------------------------------------------------
+
+private void button432_Click(object sender, EventArgs e)
+        {
+            操作紀錄MF3(sender);
+            if (SYSPara.SysRun)
+                SYSPara.LogSay(EnLoggerType.EnLog_OP, "使用者按下「強制出盤」");
+
+            if (SYSPara.SysState == StateMode.SM_ALARM)
+            {
+                SYSPara.ErrorStop = false;
+                SYSPara.SysState = StateMode.SM_PAUSE;
+            }
+
+            bool HDTFZsafe = FormSet.mMainFlow.HDTFCanTrayOut; ;
+            bool HDTBZsafe = FormSet.mMainFlow.HDTBCanTrayOut; ;
+
+            //手動強制排盤
+            if (FormSet.mMainFlow.mHomeOk)
+            {
+                //v3.0.0.11_Daniel_2018/03/12_手動排盤時機
+                if (SYSPara.SysState == StateMode.SM_PAUSE)
+                {
+                    if (SYSPara.FlipType == 1)
+                    {
+                        FormSet.mMSS.CallProc("Tray", "ChangeGoodUnLoadType");
+                    }
+                    else
+                    {
+                        if (HDTFZsafe && HDTBZsafe)
+                        {
+                            if (!FormSet.mMainFlow.StoreFinish)
+                            {
+                                SYSPara.Alarm.Say("W1102");
+                                return;
+                            }
+                            if ((bool)FormSet.mMSS.CallProc("Tray", "GetbMForceTrayoutStart"))
+                            {
+                                SYSPara.Alarm.Say("W1104");
+                                return;
+                            }
+                            if (!FormSet.mMainFlow.CheckAllMotorPos() && !FormSet.mMainFlow.PassMotorPosCheck)
+                            {
+                                return;
+                            }
+                            if ((int)FormSet.mMSS.CallProc("TTM", "GetMotoinNo") == 0)
+                            {
+                                FormSet.mMainFlow.PassMotorPosCheck = false;
+                                FormSet.mMainFlow.TrayOutNeedStore = true;
+                                FormSet.mMainFlow.bManualForceTrayOutStart = true;
+                                FormSet.mMSS.CallProc("TTM", "MForceTrayoutStart", true);
+                                FormSet.mMSS.CallProc("Tray", "MForceTrayoutStart", true);
+                                FormSet.mMSS.CallProc("TTM", "SetNeedCompareMotorPos");
+                                FormSet.mMSS.CallProc("Tray", "SetNeedCompareMotorPos");
+                                FormSet.mMainFlow.bChangeGoodUnLoadType = true;
+                            }
+                            else if (FormSet.mMainFlow.bManualForceTrayOutStart)
+                            {
+                                FormSet.mMainFlow.PassMotorPosCheck = false;
+                                FormSet.mMainFlow.TrayOutNeedStore = true;
+                                FormSet.mMSS.CallProc("TTM", "MForceTrayoutStart", true);
+                                FormSet.mMSS.CallProc("Tray", "MForceTrayoutStart", true);
+                                FormSet.mMSS.CallProc("TTM", "SetNeedCompareMotorPos");
+                                FormSet.mMSS.CallProc("Tray", "SetNeedCompareMotorPos");
+                                FormSet.mMainFlow.bChangeGoodUnLoadType = true;
+                            }
+                            else
+                                SYSPara.Alarm.Say("i1020");
+                        }
+                        else
+                            SYSPara.Alarm.Say("i1073");
+                    }
+                }
+                else
+                    SYSPara.Alarm.Say("i1019");
+            }
+            else
+                SYSPara.Alarm.Say("i1029");
+        }
+
+切換出盤模式----------------------------------------------------------------------------------
+
+
+private void button491_Click(object sender, EventArgs e)
+        {
+            操作紀錄MF3(sender);
+            if (SYSPara.SysRun)
+                SYSPara.LogSay(EnLoggerType.EnLog_OP, "使用者按下「強制出盤」");
+
+            if (SYSPara.SysState == StateMode.SM_ALARM)
+            {
+                SYSPara.ErrorStop = false;
+                SYSPara.SysState = StateMode.SM_PAUSE;
+            }
+
+            bool HDTFZsafe = FormSet.mMainFlow.HDTFCanTrayOut;
+            bool HDTBZsafe = FormSet.mMainFlow.HDTBCanTrayOut;
+            //手動強制排盤
+            if (FormSet.mMainFlow.mHomeOk)
+            {
+                //v3.0.0.11_Daniel_2018/03/12_手動排盤時機
+                if (SYSPara.SysState == StateMode.SM_PAUSE)
+                {
+                    #region 模式判斷
+                    if (SYSPara.FlipType == 0)//FlipTray
+                    {
+                        if (HDTFZsafe && HDTBZsafe)
+                        {
+                            if (!FormSet.mMainFlow.StoreFinish)
+                            {
+                                SYSPara.Alarm.Say("W1102");
+                                return;
+                            }
+                            if ((bool)FormSet.mMSS.CallProc("Tray", "GetbMForceTrayoutStart"))
+                            {
+                                SYSPara.Alarm.Say("W1104");
+                                return;
+                            }
+                            if (!FormSet.mMainFlow.CheckAllMotorPos() && !FormSet.mMainFlow.PassMotorPosCheck)
+                            {
+                                return;
+                            }
+                            if ((int)FormSet.mMSS.CallProc("TTM", "GetMotoinNo") == 0)
+                            {
+                                FormSet.mMainFlow.PassMotorPosCheck = false;
+                                FormSet.mMainFlow.TrayOutNeedStore = true;
+                                FormSet.mMainFlow.bManualForceTrayOutStart = true;
+                                FormSet.mMSS.CallProc("TTM", "MForceTrayoutStart", true);
+                                FormSet.mMSS.CallProc("Tray", "MForceTrayoutStart", true);
+                                FormSet.mMSS.CallProc("TTM", "SetNeedCompareMotorPos");
+                                FormSet.mMSS.CallProc("Tray", "SetNeedCompareMotorPos");
+                            }
+                            else if (FormSet.mMainFlow.bManualForceTrayOutStart)
+                            {
+                                FormSet.mMainFlow.PassMotorPosCheck = false;
+                                FormSet.mMainFlow.TrayOutNeedStore = true;
+                                FormSet.mMSS.CallProc("TTM", "MForceTrayoutStart", true);
+                                FormSet.mMSS.CallProc("Tray", "MForceTrayoutStart", true);
+                                FormSet.mMSS.CallProc("TTM", "SetNeedCompareMotorPos");
+                                FormSet.mMSS.CallProc("Tray", "SetNeedCompareMotorPos");
+                            }
+                            else
+                                SYSPara.Alarm.Say("i1020");
+                        }
+                        else
+                            SYSPara.Alarm.Say("i1073");
+                    }
+                    else//FlipIC
+                    {
+                        //無清洗線
+                        if ((bool)FormSet.mMSS.CallProc("Tray", "GetOnlyStackUnload"))
+                        {
+                            if (HDTBZsafe)
+                            {
+                                FormSet.mMainFlow.bManualForceTrayOutStart = true;
+                                FormSet.mMSS.CallProc("Tray", "MForceTrayoutStart", true);
+                            }
+                            else
+                                SYSPara.Alarm.Say("i1073");
+                        }
+                        else//有清洗線
+                        {
+                            if (HDTBZsafe)
+                            {
+                                if ((bool)FormSet.mMSS.CallProc("Tranfer", "GetHADIdle"))
+                                {
+                                    FormSet.mMainFlow.bManualForceTrayOutStart = true;
+                                    FormSet.mMSS.CallProc("Tray", "MForceTrayoutStart", true);
+                                }
+                                else if (FormSet.mMainFlow.bManualForceTrayOutStart)
+                                    FormSet.mMSS.CallProc("Tray", "MForceTrayoutStart", true);
+                                else
+                                    SYSPara.Alarm.Say("i1091");
+                            }
+                            else
+                                SYSPara.Alarm.Say("i1073");
+                        }
+                    }
+                    #endregion
+                }
+                else
+                    SYSPara.Alarm.Say("W1019");
+            }
+            else
+                SYSPara.Alarm.Say("i1029");
+        }
+
+PassCheck------------------------------------------------------------------------------------
+
+private void button432_Click_1(object sender, EventArgs e)
+        {
+            操作紀錄MF3(sender);
+            FormSet.mMainFlow.PassMotorPosCheck = true;
+        }

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Table Version="V2" CreateTime="20200804113720" LastTime="">
+  <Fields>
+    <F123 Type="Boolean" Value="True" />
+    <FSafeDoorSW Type="Boolean" Value="False" />
+    <FUseModule Type="Boolean" Value="True" />
+    <FModuleID Type="Int" Value="70" />
+    <FMain_Volt_PressOff Type="Double" Value="1.03" />
+    <FMain_KPa_PressOn Type="Double" Value="0.7" />
+    <FMain_Volt_PressOn Type="Double" Value="3.9" />
+    <FUseContinueMode Type="Boolean" Value="False" />
+    <FsHID_TeachB Type="String" Value="USB\VID_0EEF&amp;PID_0001\5&amp;367e86df&amp;0&amp;8" />
+    <FsHID_Mouse Type="String" Value="@USB\VID_045E" />
+    <FsHID_TeachF Type="String" Value="USB\VID_0EEF&amp;PID_0001\5&amp;367e86df&amp;0&amp;7" />
+    <FsHID_Keyboard Type="String" Value="@HID\VID_1C4F" />
+    <FLockMouseKey Type="Boolean" Value="True" />
+    <F安全門不偵測 Type="String" Value="False" />
+    <F安全點位_X1 Type="Int" Value="240000" />
+    <F空壓偵測 Type="Boolean" Value="True" />
+    <FEngineerPassword Type="String" Value="eng" />
+    <FAdministratorPassword Type="String" Value="admin" />
+    <FMain_AirPressure_Max Type="Double" Value="0.7" />
+    <FMain_AirPressure_Min Type="Double" Value="0.55" />
+  </Fields>
+</Table>

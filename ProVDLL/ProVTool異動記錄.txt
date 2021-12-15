@@ -1,0 +1,615 @@
+2020/10/26 Max v1.0.0.27
+==============================================
+1. CommLib的ProVClientSocket與ProVServerSocket的OnRead事件呼叫改為非BeginInvoke呼叫，以解決UI卡頓的問題
+2. ProVSECSEngine的OnRead事件與OnSECSEvent事件改為非Invoke呼叫
+
+2020/10/21 Kent v1.0.0.26
+==============================================
+1. 修正 PanelDataProvider.cs，因應讀取碁鼎缺點檔異常的問題 (同面反轉90度/T03取代T01)
+   a. 增加屬性「對齊TargetNo的TCode位置編號」
+
+2020/10/16 Kent v1.0.0.25
+==============================================
+1. 修正 PanelDataProvider.cs，因應讀取碁鼎缺點檔異常的問題 (同面反轉90度/T03取代T01)
+   a. 增加屬性「使用的TargetNo」
+   b. 增加屬性「對齊TargetNo的TCode代號」
+2. 修正 PanelDataProvider.cs，新增「除錯模式」下，讀取缺點檔後，可繪出原始缺點位置
+
+2020/10/13 Kent v1.0.0.24
+==============================================
+1. 修正 PanelDataProvider.cs，把入板角度加入 Cell 角度計算 => 暫不更動
+
+2020/10/12 Kent v1.0.0.23
+==============================================
+1. 修正 PanelDataProvider.cs，把入板角度加入 Cell 角度計算
+2. 修正 PanelDataProvider.cs，因應景碩cam格式不同，修正T02格式為多顆單條時，會發生讀取錯誤
+
+2020/10/06 Kent v1.0.0.22
+==============================================
+1. 修正 PanelDataProvider.cs，Unit繪製尺寸會依入料角度不同而轉向
+2. 修正 PanelDataProvider.cs，當Unit尺寸大於2倍Xout線寬才會畫X，否則則用填滿的方式
+
+2020/09/24 Kent v1.0.0.21
+==============================================
+1. 修正 PanelDataProvider.cs，重新計算顆報數量，使其符合圖面數量
+
+2020/09/23 Kent v1.0.0.20
+==============================================
+1. PanelDataProvider.cs 新增屬性「缺點搜尋範圍比率」，預設 0.5
+2. 修正 AnalyseDefect.cs 的 「同面不轉角度」的 ShiftDefectPosMappingCam 函數，景碩的缺點解析，代碼全部寫入ErrID，DefectState全部=1
+
+2020/09/16 Kent v1.0.0.19
+==============================================
+1. 修正 PanelDataProvider.cs 的 AddAllPos 函數，當條數>1時才會去尋找最小條邊距
+2. 新增 高雄日月光 StripCAM 檔案格式定義
+
+2020/09/03 Kent v1.0.0.18
+==============================================
+1. 修正 AnalyseDefect.cs 內的 各GetDefectCompareCamMatch函數，搜尋範圍改以短邊為主
+
+2020/09/02 Max v1.0.0.17
+==============================================
+1. 將通訊元件的燈號由KCSDK2的LED改為原通訊元件裡的LEDCtrl
+
+2020/09/01 Kent v1.0.0.17
+==============================================
+1. 修正上海日月光讀取缺點檔 no match 的異常
+2. 修正南亞 ,f 缺點狀態需列入缺點數量的問題
+
+2020/08/25 Max v1.0.0.17
+===============================================
+1. 基於ProVTool_v1.0.0.16之後拆分出以下5個類別庫，使用者僅會看到ProVTool.dll這一個類別庫
+
+2020/08/17 Kent v1.0.0.16
+===============================================
+1. PanelDataProvider.cs 新增屬性「T07點位資料排序」功能開關，原為依客戶別切換
+
+2020/08/17 Max v1.0.0.15
+===============================================
+1. 修正雷射校正工具中因KCSDK修改導致的編譯錯誤
+
+2020/08/06 Max v1.0.0.14
+===============================================
+1. ProVTool.dll版次更新
+
+2020/08/06 Max v1.0.0.14
+===============================================
+1. LaserCommonForm LoadFile通訊指令新增DateTime參數，以供對時之用
+
+2020/08/05 Kent v1.0.0.13
+===============================================
+1. 新增 Cam 位置格式，後面帶,n (空點)/,f(固定缺點) 可讀取功能
+2. 修正缺點讀取時，不能覆蓋「空點」
+ 
+2020/07/07 Kent v1.0.0.12
+===============================================
+1. PanelDataProvider.cs 增加繪製 T81 圖形
+2. PanelDataProvider.cs 修正 T81 資料會隨T02重新編排Index
+3. PanelDataProvider.cs 增加可選取顯示 T81 圖形
+4. PanelDataProvider.cs 修正 LoadCamFile 函數，可避免讀取不必要的TCode
+
+2020/07/02 Kent v1.0.0.11
+===============================================
+1. PanelDataProvider.cs 修正判斷無T02資料/StripCount=0時，也不會判斷為錯誤的問題
+
+2020/07/01 Kent v1.0.0.10
+===============================================
+1. PanelDataProvider.cs 增加屬性「檢查T03」，關閉時即不檢查T03是否存在
+
+2020/06/17 Kent v1.0.0.9
+===============================================
+1. 修正 AVIObj.cs 加入可解讀 Tray#1 格式的檔頭
+
+2020/06/09 Kent v1.0.0.9
+===============================================
+1. 完善SSLM_VLSComm及SSST_VLSComm元件
+2. 增加SSLM/SSST元件說明文件
+
+2020/06/08 Kent v1.0.0.9
+===============================================
+1. 增加VLS通訊相關類，內含 SSLM_VLSComm 及 SSST_VLSComm 元件
+2. 增加VLS通訊協定表格
+
+2020/05/27 Max v1.0.0.9
+===============================================
+1. ProVSECSEngine修改解碼SECS_BOOLEAN型別由0xFF->True改為非0即為True
+
+2020/05/22 Kent v1.0.0.9
+===============================================
+1. PanelDataProvider.cs 在單行單列 Pitch 的判斷上修正，避免計算錯誤的情況發生
+
+2020/05/20 Max v1.0.0.9
+===============================================
+1. 條層級計算新增T53~T59, T63~T69與T81
+2. ProVSECSEngine事件中文訊息改英文訊息
+
+2020/05/18 Kent v1.0.0.9
+===============================================
+1. DataProviderBase.cs 新增「欣興楊梅」客戶
+2. PanelDataProvider.cs 新增 LoadCamFile_欣興楊梅/LoadFromFile_欣興楊梅 函數，以對應「欣興楊梅」的格式
+
+2020/05/14 Kent v1.0.0.9
+===============================================
+1. AVIObj.cs 修正原可接受缺點類型為 N/D/O/S，改為開放參數，可由使用者設定，參數名稱為「可接受缺點類型」
+
+2020/05/13 Kent v1.0.0.9
+===============================================
+1. StripDataProvider.cs 修正部份函數，先處理資料，再一次更新，避免每次資料變動時，都要更新
+2. StripDataProvider.cs 修正繪圖函數，原使用foreach皆改為使用for
+
+2020/05/12 Kent v1.0.0.9
+===============================================
+1. 修正 PanelDataProvider.cs 內的「入板角度」，使用0~270度，都可以旋轉的效果，之前只有0~180
+
+2020/05/8 Kent v1.0.0.9
+===============================================
+1. PanelDataProvider.cs T07 項目解析修改為，除欣興S2/S3，景碩不排序外，其餘都要排序
+2. PanelDataProvider.cs 新增 CamPosUnitRate 屬性，表示Cam檔內座標基本單位/0.001mm 
+
+2020/04/21 Kent v1.0.0.9
+===============================================
+1. PanelDataProvider.cs 增加顯示多顆 2D and SN
+
+2020/04/19 Kent v1.0.0.9
+===============================================
+1. PosA 結構加入 LoadPos 參數，可記錄 OrgPos 經入板角度計算後之位置
+2. 修正補償計算時，會引用 OrgPos，改為引用 LoadPos
+
+2020/04/13 Kent v1.0.0.9
+===============================================
+1. AVIObj.cs 新增檔案資料 Job 的解析，並且在輸出檔案時，日月光客戶會輸出Job資料
+2. AnalyseDefect.cs 修正景碩三種格式，都要讀ErrID and LevelNo
+3. PanelDataDefine.cs 修正 PosA Type ErrID and LevelNo 的預設值
+
+2020/04/10 Kent v1.0.0.9
+===============================================
+1. AnalyseDefect.cs 內的 DefectData Class 新增二個屬性： ErrID/LevelNo
+2. PanelDataDefine.cs 內的 PosA Class 新增二個屬性： ErrID/LevelNo
+3. PanelDataProvider.cs 修正 LoadDefectFile 函數，當找到缺點對應的Unit時，會將新增的屬性設定到該Unit
+
+2020/04/01 Kent v1.0.0.9
+===============================================
+1. 修正AVIObj.cs，因碁鼎AVI檔案格式有新的需求
+
+2020/03/26 Kent v1.0.0.9
+===============================================
+1. PanelDataProvider.cs 新增 Unit排列搜尋尺寸大小/不規則排板 兩種屬性
+2. SortUnit函數內判斷如行列數相乘 != Cam檔Unit數 則為不規則排板
+
+2020/03/25 Kent v1.0.0.9
+===============================================
+1. 加入可讀取景碩第三種格式的缺點檔案
+
+2020/03/18 Kent v1.0.0.9
+===============================================
+1. 新增T10/T13組數判斷規則，如組數不正確則LoadCam失敗
+
+2020/03/17 Max v1.0.0.9
+===============================================
+1. 修改ProVServerSocket呼叫Disconnect函式後沒有OnDisconnect事件觸發的Bugs
+
+2020/03/06 Kent v1.0.0.9
+===============================================
+1. T81修正使用規則
+2. T13修正讀出bug
+
+2020/03/05 Kent v1.0.0.9
+===============================================
+1. T81/T91/T92 使用開啟
+
+2020/03/04 Kent v1.0.0.9
+===============================================
+1. 修正無法讀出 T53~T59/T63~T69 的問題
+
+2020/02/20 By Kent v1.0.0.9
+===============================================
+1. 因應 Center檔案定義v2.6 修正 PanelDataProvider.cs / AnalyseDefect.cs內容，使其可以符合景碩的Cam檔及缺點檔
+
+2020/02/04 By Max v1.0.0.9
+===============================================
+1. DataProviderBase.cs新增碁鼎秦皇島客戶別
+
+2020/02/04 By Kent v1.0.0.9
+===============================================
+1. 修正AVIOBJ.cs，過站,M重覆輸出的問題
+2. 修正AVIOBJ.cs，當路缺點資料無輸出的問題
+
+2020/02/03 By Max v1.0.0.9
+===============================================
+1. 修改Socket元件為沒有MSG_PEEK功能的版本
+
+2020/01/30 By Kent v1.0.0.8
+===============================================
+1. StripDataProvider.cs 新增 MarkType.特殊橫槓 類型
+2. AVIObj.cs 輸出時，可選擇照原始缺點字串輸出或處理後輸出(預設為原始缺點字串輸出)
+
+2020/01/16 By Kent v1.0.0.8
+===============================================
+1. 修正AVIObj.cs 因應站別的名稱內含XY，會誤判為缺點資料的問題
+
+2019/12/23 By Kent v1.0.0.8
+===============================================
+1. 因應「單一 block 超過允收數不打印直接報廢」功能，新增檢查function (StripDataProvider.cs)
+2. StripDataPrivider.cs 內的EMappingOutput 加入 XoutIsZero 的參數，供Xout的描述字元由1轉0
+
+2019/12/15 By Kent v1.0.0.8
+===============================================
+1. AVIObj新增InverterY參數，輸出時，可將Y反向輸出
+2. StripDataProvider.cs EMappingOutput 新增 InverterY 參數，可將Y反向輸出
+3. AVIObj新增LoadInverterY參數，當載入時，將Y反向載入
+
+2019/12/10 By Stanley v1.0.0.8
+===============================================
+1.加入雷射校正工具 - FieldCorrection
+                   - TrueValue
+
+2019/12/10 By Max v1.0.0.7
+===============================================
+1. LaserCommonForm的LASERRTID新增FAIL_SAMEMONAME用來表示VLM檔中有相同物件名稱
+
+2019/11/21 By Kent v1.0.0.6
+===============================================
+1. 修正條報時，會無法畫出條報圖形的錯誤，主要修正 StripPitch 要計算正確及繪圖時，Block中心位置計算錯誤的問題
+2. 修正PanelDataDefine.cs內的DefectState的初始值為 int.MinValue，原為0，但訊德客戶有個缺點狀態為0
+   所以使用int.MinValue為判斷基準
+3. 修正不同轉向模式時，條報會計算錯誤
+
+2019/11/13 By Kent v1.0.0.6
+===============================================
+1. 修正 StripDataProvider.cs 內的 GetBlockMatrixXN/GetBlockMatrixYN，當Block數量超出該Dimension定義時，自動
+   跳去下一個Dimension計算
+
+2019/11/01 By Kent v1.0.0.6
+===============================================
+1. 因應 Cam檔定義v2.5更新，修正PanelDataProvider.cs，增加高雄日月光對於參考點的定義
+
+2019/10/23 By Kent v1.0.0.6
+===============================================
+1. 修正 StripDataProvider.cs 的 EMappingOutput 函數，對於行列值的定義不正確 
+
+2019/10/16 By Kent v1.0.0.6
+===============================================
+1. 修正 PanelDataProvider.cs 內的 「解析TCode_Unit專用」函數，增加可讀取日月光的格式
+
+2019/10/16 By Max v1.0.0.6
+===============================================
+1. 修改Socket通訊元件，新增OnReadTrigger Thread專門觸發CnRead Event，以實作出類似BCBSocket的功能
+
+2019/09/27 By Kent v1.0.0.5
+===============================================
+1. 配合雷射座標補償，增加StripDataProvider.cs SearchCell_LaserBNo 函數
+
+2019/09/25 By Max v1.0.0.5
+===============================================
+1. SocketClient 重載ReadBuf與ReadText函式，提供設定讀取長度以及是否要將內部Buffer清空的設定，預設為清空（MSG_READ）
+
+2019/09/18 By Max v1.0.0.5
+===============================================
+1. ProVSECSEngine將EncodingCode屬性預設值由US_ASCII改為BIG5
+
+2019/09/18 By Max v1.0.0.5
+===============================================
+1. ProVSECSEngine新增EncodingCode屬性，提供SendData函式判斷目前傳送的資料為何種編碼方式，預設為US_ASCII
+2. ProVSECSEngine呼叫BeginInvoke前先判斷IsDispose
+
+2019/09/16 By Kent v1.0.0.5
+===============================================
+1. StripDataProvider內的 DrawBlock 關掉不畫
+2. 修正 GIndex 會有錯誤的問題
+
+2019/09/11 By Kent v1.0.0.5
+===============================================
+1. 增加 StripDataProvider.cs 內的函數 ArrayByGIndex，依指定正背面、GIndex、GNo及打印類型設定Cell狀態
+
+2019/09/9 By Kent v1.0.0.5
+===============================================
+1. 增加 StripDataProvider.cs 內的 LoadObverse/LoadPositive 函數，可讀取 VLS index 的資料
+2. 增加 StripDataProvider.cs 內的 LoadObverse/LoadPositive 函數，可讀取 固定打印/忽略顆的資料
+3. 增加 StripDataProvider.cs 內的屬性 GraphCountF/GraphCountB，可記錄 ODR 內的圖形數量
+4. 增加 StripDataProvider.cs 內的函數 ArrayByGIndex，依指定正背面、GIndex、GNo及打印類型回傳Cell指標
+5. 增加 StripDataProvider.cs 內的函數 SetFixData，將固定忽略/打印資料設定至狀態
+
+2019/09/2 By Kent v1.0.0.5
+===============================================
+1. 修正變形補償時，如果XY距離=0時，會計算錯誤的問題
+2. 增加 GolderToXOut的函數
+
+2019/08/28 By Kent v1.0.0.5
+===============================================
+1. PanelDataProvider.cs 新增 除錯模式屬性，可開關是否發出例外視窗
+
+2019/08/27 By Kent v1.0.0.5
+===============================================
+1. BaseView.cs LockView 屬性增加禁止mouse滾輪功能，開啟時，將無法再用mouse進行畫面操作
+
+2019/08/26 By Kent v1.0.0.4
+===============================================
+1. 修正DrawBlock時，背景位置計算會因 ViewZero 和 StripDir 計算錯誤而異常   
+
+2019/07/18 By Max v1.0.0.4
+===============================================
+1. 修改SetMatrixCellParams指令，移除ParamMap參數
+2. 新增GetObjParam通訊指令，以取得指定打印物件的參數
+
+2019/07/17 By Kent v1.0.0.4
+===============================================
+1. StripDataProvider 新增公用函數 SaveOffset 函數，供外部呼叫儲存補償檔
+
+2019/07/10 By Max v1.0.0.4
+===============================================
+1. ProVSECSEngine修改SendHSMSMessage函式，增加Lock機制以避免ThreadSafe問題
+2. ProVSECSEngine新增布林變數以判斷是否為Active端主動斷線，以解決ProVSECSEngine無法判斷主動斷線而啟動T5Timer
+
+2019/07/10 By Max v1.0.0.4
+===============================================
+1. 新增SaveQPSet(IsMOName, Name, ParamMap, Param1, Param2)通訊指令，可將傳送的兩個參數（Param1, Param2）透過IsMOName（判斷Name是物件名稱還是參數名稱）與ParamMap（判斷要儲存的參數為何）判斷儲存起來
+
+2019/07/09 By Max v1.0.0.4
+===============================================
+1. 新增SetMatrixCellParams(MatrixName, ObjName, ParamMap, List<MOData>)通訊指令，同一次指令可以透過MOData來設定Current, Frequency, Speed與Overlap參數中的任兩個
+   ParamMap列舉參數用來判斷使用者設定哪兩個參數
+
+2019/07/01 Max v1.0.0.4
+===============================================
+1. 修改LaserCommonForm的CreateLaserCommonForm，新增參數以控制要步要記錄雷射SECS格式的Log檔，預設不建立
+2. 修改ProVSECSEngine Decode函式，將List<byte> 改為byte[]型別以提升解碼速度
+3. 修改LaserCommonForm的LoadJob指令，新增第二參數MARKSELECT列舉，以選擇打框、打內容物或是全打的功能， PLS須為v1.0.0.7版
+
+2019/07/01 Kent v1.0.0.4
+===============================================
+1. Strip Job File YN = 1 時，修正在變形補償時會有計算問題
+2. 優化讀取 Strip Job File 的速度， 2800 ea 13 sec = > 3 sec
+3. 修正 StripOffset 內的單顆補償，切換A/B車時，累積選擇會異常的bug
+4. 新增單顆補償時，當選取同軸向不同補償值時，會顯示成空白，可調整另一軸向的補償值
+
+2019/06/11 Kent v1.0.0.4
+===============================================
+1. BaseView 新增 LockView 屬性，可以鎖住畫面不移動
+2. StripDataProvider 修正屬性 StripDir，擴增為8個方向方式
+
+2019/05/25 Kent v1.0
+===============================================
+1. PanelDataProvider.cs 新增入板角度屬性
+
+2019/05/22 Kent v1.0
+===============================================
+1. AVIObj Load函數讀取AVI檔案時，去除空白行數，避免讀取錯誤
+
+2019/05/15 Kent v1.0
+===============================================
+1. 修正 ClientSocket 元件在斷線時，不會真正斷線的問題
+
+2019/05/04 Kent v1.0
+===============================================
+1. 修正金點資料在 SetStripDir 後的Index 會有問題
+2. 修 Xouttogolden 的問題
+
+2019/04/18 Max v1.0
+===============================================
+1. Move函式角度旋轉判斷，如值為Double.MaxValue，則使用物件原來的角度，不做旋轉
+
+2019/03/29 Kent v1.0
+===============================================
+1. 修正金點資料在 SetStripDir 後的Index 會有問題
+2. 修 Xouttogolden 的問題
+
+2019/03/29 Max v1.0
+===============================================
+1. ProVSECSEngine修改ACTIVE Mode時斷線重連的Bugs
+2. SECSDataType修改編碼陣列型態時NumberOfBytes計算錯誤的問題
+3. LaserCommonForm修改SetMatrixCellOccupation的MarkIndex資料型態由I4陣列改為I4 List
+
+2019/03/28 Kent v1.0
+===============================================
+1. 修正手動輸入設定時 Y向Block>1時的計算錯誤
+2. 增加AutoFontSizeLimit設定
+3. 修正AutoFontSize搜尋上限值 40->24
+4. 修正 StripSelector.cs 改為實際讀檔的方式加入
+
+2019/03/25 Kent v1.0
+===============================================
+1. 修正 Stripoffset 加入單/框選後的bug
+2. 修正 StripOffset 不用 CopyTo的方式加入 Cell資料，改用實際讀檔的方式加入
+
+2019/03/21 Kent v1.0
+===============================================
+1. FTPObj 增加 UseBinary/UsePassive/Keepalive 三個參數供設定
+2. 修正 FTPObj 內的 getFileExist 的使用方式
+3. 條正 FTPObj 各函數的 LastMessage 的格式
+
+2019/03/20 Kent v1.0
+===============================================
+1. StripSelect.cs 增加 單/框選 按鈕功能
+2. StripOffset.cs 增加 單/框選 按鈕功能
+
+2019/03/08 Kent v1.0
+===============================================
+1. ViewBase 的 ShowGridOrIndex 改為屬性
+2. AVIFile Obj 修正 FLOW PASSED 及 FLOW DESIGNED 改為可為空字串
+
+2019/03/06 Kent v1.0
+===============================================
+1. 實做 StateType.Checked 的繪圖
+2. 增加 StateType.BIN1 的類型及繪圖
+3. 增加 StateType.BIN2 的類型及繪圖
+
+2019/02/22 Kent v1.0
+===============================================
+1. 修正StripDataProvider的Array函數的bug
+
+2019/01/30 Kent v1.0
+===============================================
+1. StripDataProvider 修改 DrawBlock 函數
+
+2019/01/09 Kent v1.0
+===============================================
+1. LaserCommonForm 修正 SetMeasureParam 流程的Bugs
+2. LaserCommonForm UI SetMeasureParam與ChangeMeasureMode按鈕事件處理函式新增
+3. ProVSECSEngine 新增SpoolActive功能以及相關此功能的修改
+4. ProVSECSEngine 新增DeviceID檢查
+5. SECSDataType 修改ASCII型別使其支援CHAR Array
+6. LaserCommonForm 新增 BeamOn、GetQPList、SetMeasureParam與ChangeMeasureMode功能
+7. 修改ProVChart元件資料數量超過9個之後X軸Label會隔著顯示的問題
+8. 修改ProVChart元件資料每隔一筆以不同顏色顯示
+9. 切割機使用中的Namespace修改為ProVTool以避免與切割機中的SawLib衝突
+10. 通訊相關中的Utility.cs修改SECSDATA結構存取層級改為Public
+11. 圖控資料處理中新增ProVChart元件，ChartData設定資料來源，IsValueShownAsLabel屬性控制圖形資料上緣是否顯示數值
+
+
+2019/01/03 Kent v1.0
+===============================================
+1. StripDataProvider.cs 增加輸出 Emapping 檔案功能
+2. StripDataProvider.cs 增加Block參數
+
+2018/12/2 Kent v1.0
+===============================================
+1. PanelDataProvider 增加 AlignOffset 二點定位補償方式
+
+2018/11/28 Kent v1.0
+===============================================
+1. 增加 T05/T06/T51/T52/T61/T62 按照指定順序排序
+
+2018/11/27 Kent v1.0
+===============================================
+1. PanelDataProvider 增加打印選取框顯示功能
+2. PanelDataProvider 增加重置選取框功能
+3. PanelDataProvider 狀態屬性顏色設定
+4. PanelDataProvider 狀態列舉增加 Checked 
+
+2018/11/26 Kent v1.0
+===============================================
+1. 修正AVIObj 類別部份功能
+
+2018/11/06 Kent v1.0
+===============================================
+1. 修正異動記錄檔
+
+2018/10/31 Kent v1.0
+===============================================
+1. 修正StripDataProvider
+
+2018/10/18 Kent v1.0
+===============================================
+1. 刪除不必要的檔案
+
+2018/10/17 Kent v1.0
+===============================================
+1. 修正T10/T11
+
+2018/10/17 Kent v1.0
+===============================================
+1. 因應 KCSDK 更新
+
+2018/10/15 Kent v1.0
+===============================================
+1. 修正 SelectByRect 函數
+
+2018/10/14 Kent v1.0
+===============================================
+1. 增加SelectByRect依範圍選擇打印物件
+
+2018/10/11 Kent v1.0
+===============================================
+1. 加入 avi 檔案格式載入及輸出
+2. 加入 AVIFIle 類別
+
+2018/10/10 Kent v1.0
+===============================================
+1. 參數整理
+2. 加入變形量補償
+3. 修正 MouseMove 移動的bug
+
+2018/10/09 Kent v1.0
+===============================================
+1. 大幅改善讀檔效率
+2. 公用函數整理
+3. 增加打印狀態
+
+2018/10/03 Kent v1.0
+===============================================
+1. 修正多項錯誤及優化
+2. 可支援 南亞，群策，欣興S2/S3，訊德
+
+2018/10/01 Kent v1.2
+===============================================
+1. PanelDataProvider 修正欣興S2/S3讀取Cam檔及缺點的正確性
+
+2018/09/29 Kent v1.2
+===============================================
+1. 增加 T03 16點定位的設定
+2. 開放各顏色設定
+3. 繪圖框操作方式變更(右鍵移動)
+4. PanelDataProvider 修改
+
+2018/09/20 Kent v1.2
+===============================================
+1. FTPObj.cs 增加 Timeout 參數
+2. 開放 LastMessage 參數
+
+2018/09/19 Kent v1.2
+===============================================
+1. FTPObj.cs 增加 getFileList 函數 
+
+2018/09/17 Kent v1.2
+===============================================
+1. PanelSideType 增加 Mix Side
+2. 因應 UIActor 更新，修改 FTPForm 的 Actor event
+3. FTPObj.cs 新增 getFileExist 函數
+
+2018/09/7 Kent v1.2
+===============================================
+1. 加入 MappingToFront 方法，可從背面映射到正面
+2. 加入 AutoUnitSize 屬性，可自動決定 Unit 大小
+3. 加入 GridNumFontSize/IndexNumFontSize，可決定格線文字大小/Index號碼文字大小
+
+2018/08/29 Kent v1.2
+===============================================
+1. 修正 DrawPanel 時會發生例外的bug
+2. 加入 FirstUnitColor/LastUnitColor 可以指定 Strip First/Last 的顏色
+
+2018/08/17 Kent v1.2
+===============================================
+1. FTPClient 刪除，改為 FTPForm，並加入 FTPObj.cs
+
+2018/08/13 Kent v1.2
+===============================================
+1. PanelDataProvider.cs 刪除 Size_StripUnit 屬性，改由內部自動計算
+2. ViewObj.cs Resize時，改為自動重繪
+3. PanelDataProvider.cs 修正 Defect 繪圖時的大小計算
+
+2018/07/17 Kent v1.2
+===============================================
+1. FTPClient 修正各函數 Reset 時，必須為 true，才代表可以執行的狀態
+   避免重覆呼叫
+
+2018/07/15 Kent v1.2
+===============================================
+1. 改正 PanelDataProvider 內的 LoadCamFile/AddAllPos/DrawPanel 函數
+   使其可以正確讀出 M70/M80/M90 Code
+
+2018/06/07 Kent v1.2
+===============================================
+1. 修正StripDataProvider的MixState函數
+2. 修正FTPClient 的 RootPath 參數開放為 Public
+
+2018/06/04 Kent v1.2
+===============================================
+1. FTPClient 建構子修改
+
+2018/05/28 Kent v1.2
+===============================================
+1. StripDataProvider 新增 Array 函數，可將Unit資料轉為2維陣列型式
+
+2018/05/25 Kent v1.2
+===============================================
+1. StripDataProvider 新增 SearchCell 函數
+
+2018/05/22 Kent v1.1
+===============================================
+1. StripDataProvider 新增 HasMType 函數
+
+2018/05/09 Kent v1.0.0.1
+===============================================
+1. 整合通訊相關工具庫
+2. 整合切割機相關工具庫
+

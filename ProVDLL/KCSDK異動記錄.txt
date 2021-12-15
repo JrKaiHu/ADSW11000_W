@@ -1,0 +1,318 @@
+2021/07/22 Kent v1.0.0.25
+===============================================
+1. 修正 DDataGridView 顯示異常問題 (RefreshDisplay函數)
+
+2021/07/21 Kent v1.0.0.24
+===============================================
+1. 修正 DEdit/DFieldEdit/DPosEdit 元件的 MaxValue/MinValue 屬性無法設定實數值的問題
+2. 修正 DEdit/DFieldEdit/DPosEdit/DCheckBox/DComboBox/DMFieldCB/DRadioGroupBox/TFieldCB 元件
+   a. 增加當資料變異時，會自動變色提醒使用者
+   b. 增加 ModifiedColor 屬性，可設定資料變異時的顏色
+
+2021/07/02 Kent v1.0.0.23
+===============================================
+1. 修正 Secret.cs，將使用者管理表格從 secret.xls 獨立出來 userlist.xls
+
+2021/07/01 Kent v1.0.0.22
+===============================================
+1. 增加 Secret.cs class，可進行權限管理
+
+2021/06/21 Kent v1.0.0.21
+===============================================
+1. 圖顯控件 ThreeColorLight.cs 新增 藍燈配置，改為四色燈
+2. 各資料控件如屬性設定錯誤(DataSource/DataName)，則控件會以紅色顯示或文字「屬性設定錯誤」顯示
+
+2021/05/18 Kent v1.0.0.20
+===============================================
+1. 修正 DataManagement.cs 內 TableModifiedLog 函數，避免新/舊表格欄位數量有差異時
+   會發生記錄例外的情況
+
+2021/03/27 Max v1.0.0.19
+===============================================
+1. DataManagement.cs 新增對FieldList存取時加入Lock機制
+2. DataManagement.cs 新增FieldList呼叫FindIndex時委派的實作中加入SD是否為null的判斷
+
+2021/02/05 Kent v1.0.0.18
+===============================================
+1. Remark DataManagement.cs 內的 initial 函數例外處理 BackupDbAndClose
+2. Remark DataManagement.cs 內的 BackupDbAndClose 函數
+
+2020/09/03 Kent v1.0.0.17
+===============================================
+1. TFieldCB.cs 增加 OnBeforeShow 事件，可設計當子表格編輯視窗顯示前的動作。
+
+2020/08/18 Kent v1.0.0.16
+===============================================
+1. LED.cs Value 屬性改為 LEDState 結構，並增加 Blink 狀態
+2. LED.cs 增加 BlickInterval 屬性，可設定閃爍間隔
+3. LEDLabel.cs 因 LED.cs 更改作修正
+
+2020/08/14 Max v1.0.0.15
+===============================================
+1. 新增 DataManagement.cs Initial 時，資料表欄位不一致時捕捉例外的程式碼
+
+2020/08/10 Kent v1.0.0.14
+===============================================
+1. 修正 DataManagement.cs Initial 時，DBLog記錄會有記憶體一直長大的異常
+2. 修正 DataManagement.cs DBLog的方式
+
+2020/08/05 Kent v1.0.0.13
+===============================================
+1. 修正 DataTransfer Int異常
+2. 修正 SaveFile FolerPath = null 時的異常
+
+2020/08/04 Kent v1.0.0.12
+===============================================
+1. TFieldCB.cs 修正 RefreshDisplay 時也要呼叫 DMFieldCB 的 RefreshDisplay
+
+2020/08/01 Kent v1.0.0.11
+===============================================
+1. DataManagement.cs 新增可將Log記錄至DB功能
+2. DataManagement.cs 新增 ModifiedLogToDB 屬性，可控制將資料修正log記錄存入資料庫
+3. 更新 LogAnalyzer.dll
+
+2020/07/30 Kent v1.0.0.11
+===============================================
+1. 修正 TFieldCB.cs 的 Edit 按鈕事件的異常
+2. DataManagement.cs 取消 NoChangeinAuto 屬性，並修正各資料元件 
+3. DataManagement.cs 取消 sFilePath/sTableName 改為 mTablePath/mTableName，並新增 FullPath 參數
+4. DataManagement.cs GetData 子表格時，會重新讀取子表格，避免讀取舊的資料
+5. DataManagement.cs SetData 子表格時，會自動存檔
+6. ListViewEx.cs 修正
+
+2020/07/23 Kent v1.0.0.10
+===============================================
+1. 資料控件刪除「DMFieldLV.cs」控件
+2. DataSnippet.cs 內的 CanChange 函數 去除 「DMFieldLV」類型
+3. Language.cs 內的 ScanComponentFromListCallback 函數 去除 「DMFieldLV」類型
+4. Language.cs 內的 ScanComponentToListCallback 函數 去除 「DMFieldLV」類型
+5. 修正「DMFieldCB.cs」控件，使其符合目前資料讀取的機制
+6. DataManagement.cs 修正
+   6.1 FieldData 資料結構新增 SubPackage 子表格資料
+   6.2 LVViewer 去除
+   6.3 CBViewer 去除
+   6.4 屬性 SourceName 去除(原為要跟 TPackageData 連結用)
+   6.5 屬性 SelectPackage 去除
+   6.6 列舉 DataType 去除
+   6.7 LoadFile 改為可判斷格式版本，並依對應的函數讀取
+   6.8 SaveFile 改為新的資料格式寫入
+   6.9 新增 FieldList 作為資料容器，原SettingList/PackageList去除不用
+   6.10 新增 CreateTime/LastTime/FileVersion 共用參數
+   6.11 原sModuleName參數改為TableName，作為Log記錄時 DataSource的名稱
+   6.12 ValueDataType列舉新增 SubPackage 格式
+   6.13 SetData/GetData/ReadValue/ReadTable因應資料不同作修正
+   6.14 去除 ChangePackageName/DeletePackage/PackageExist 函數
+   6.15 新增 GetFolderPath 函數，可取得目前表格的路徑
+7. 資料控件刪除「TPackageData.cs」控件
+8. 改寫 「DMFieldCB.cs」使用支援子表格功能
+9. 改寫 「TFieldCB.cs」使用支援子表格功能
+10. 修正全部資料控件，使其符合目前資料讀取的機制
+
+2020/05/12 Kent v1.0.0.9
+===============================================
+1. 修正 MathSnippet.cs 內的 CalcPosAfterRotate 函數，刪除對角度的卡控
+
+2020/04/28 Kent v1.0.0.9
+===============================================
+1.  ResetLastTime 改名為 ResetPackageTime，並修改為 CreateTime = Now, LastTime = ""
+
+2020/04/10 Kent v1.0.0.9
+===============================================
+1. DataManagement.cs 新增 ResetLastTime 函數，可重置該料號的最後使用日期
+
+2020/03/10 Max v1.0.0.9
+===============================================
+1. ListViewEx元件重載Select函式，將FocusItem設定為最近一次選擇的Item上面的
+
+2020/02/25 Kent v1.0.0.9
+===============================================
+1. 修正 DataManagement.cs 的 SaveFile 函式內的 Setting Table 無法正確儲存表格值的問題
+
+2019/12/11 Max v1.0.0.9
+===============================================
+1. 修改DataManagement.cs的ChangeData函式，將ModifiedLog的旗標檢查縮小範圍至紀錄Log的區域
+
+2019/12/03 Max v1.0.0.9
+===============================================
+1. 語系掃描增加ProVSDK元件的支援
+
+2019/09/23 kent v1.0.0.9
+===============================================
+1. 修正 ShareM.cs 內的 read 函數，避免會卡thread的問題，並且優化讀取速度
+
+2019/09/11 kent v1.0.0.9
+===============================================
+1. 修正 ListViewEx 元件當在KeyDown時，選項會有殘色的問題
+
+2019/09/10 kent v1.0.0.9
+===============================================
+1. 圖顯示控件新增 ListViewEx.cs 元件，可取代 ListView 元件
+   a. 失去焦點時，可顯示已選擇項目為指定顏色
+   b. 將常用屬性先設定好
+   
+2019/07/1 kent v1.0.0.9
+===============================================
+1. 修正MathSnippet.cs內的DistortionObj.GetPos，增加「變形時防同一直線的狀況，會有NaN的數值」的預防
+
+2019/05/15 kent v1.0.0.9
+===============================================
+1. 修正表格型式的資料欄位內的Log記錄方式
+
+2019/04/18 kent v1.0.0.9
+===============================================
+1. 修正 MathSnippet 內的二點求角度 的防呆判斷
+
+2019/04/12 kent v1.0.0.9
+===============================================
+1. DataManagment's SaveFile 函數，新增可帶入路徑檔名，實現另存新檔功能
+
+2019/01/03 kent v1.0.0.8
+===============================================
+1. 更新 Language.cs 語系掃描方式
+2. 修改 DataManagement.cs 的 xml format
+
+2018/12/2 Kent v1.0.0.8
+===============================================
+1. MathSnippet 加入 CalcAngleBy2Line 函數
+2. CalcPosAfterRotate 修正為 
+   public static void CalcPosAfterRotate(DPoint RotateCenter, DPoint OldPos, DPoint Offset, ref DPoint NewPos)
+
+2018/11/09 Kent v1.0.0.8
+===============================================
+1. 加入TabControl自畫頁籤 snippet 並設定為 button
+
+2018/11/08 Kent v1.0.0.8
+===============================================
+1. 加入TabControl自畫頁籤 snippet
+
+2018/11/06 Max v1.0.0.8
+===============================================
+1. ProVChart 除去排序功能
+2. IOMapping.cs 移除 (轉至 ProVIFM)
+3. 新增 Lincense 類別
+
+2018/11/02 Max v1.0.0.8
+===============================================
+1. ProVChart 開放 Dock 屬性
+
+2018/11/02 Max v1.0.0.8
+===============================================
+1. ProVChart 新增對X軸資料排序功能，透過SortMethod屬性設定
+2. ProVChart 新增取消格線顯示功能IsShowGridX, IsShowGridY
+
+2018/10/31 Kent v1.0.0.7
+===============================================
+1. 加入 ProVChart 控制項
+
+2018/10/18 Kent v1.0.0.7
+===============================================
+1. 增加 GetRectangleCenter 函數
+2. 增加 RectangleSort 函數
+
+2018/10/17 Kent v1.0.0.7
+===============================================
+1. getCenterOfGravityPoint 函數修正
+
+2018/10/17 Kent v1.0.0.7
+===============================================
+1. MathSnippet 增加 DistortionObj 計算變形量
+2. MathSnippet 增加 getCenterOfGravityPoint 由四邊頂點求重心 
+3. MathSnippet 增加 RectangleSort 四邊頂點照順序排
+
+2018/09/21 Kent v1.0.0.7
+===============================================
+1. DEdit / DFieldEdit / DPosEdit 增加 AutoFocus 可自動取得焦點屬性
+
+2018/09/7 Max v1.0.0.7
+===============================================
+1. MotorJog Loop移動時間顯示異常修正
+
+2018/08/8 Kent v1.0.0.6
+===============================================
+1. IOMapping.cs 增加 MNetSpeed 欄位讀寫功能
+
+2018/07/18 Kent v1.0.0.6
+===============================================
+1. 修正 MotorJog.cs 的Loop功能，當Goto1/2或DelayTime輸入錯誤時，會不停的發錯誤訊息的bug
+
+2018/06/25 Kent v1.0.0.6
+===============================================
+1. DFieldEdit / DPosEdit / DEdit 加入滾輪事件，可透過滾動增減數值
+2. DFieldEdit / DPosEdit / DEdit 加入 StepValue, 可設定滾動時寸動值
+3. DFieldEdit / DPosEdit / DEdit 加入MouseMove 事件，在此物件上，會自已 Focus
+
+2018/06/07 Kent v1.0.0.6
+===============================================
+1. TStringList 修正 SaveToFile，改為 AppendAllText => WriteAllText
+
+2018/06/05 Kent v1.0.0.6
+===============================================
+1. ActionDT 加入 Task參數，可使用在執行步序上
+
+2018/06/04 Kent v1.0.0.6
+===============================================
+1. DRadioGroupBox 新增 ItemWidth 項目寬度屬性
+   
+2018/05/28 Kent v1.0.0.6
+===============================================
+1. DRadioGroupBox 修正當重構時，會把內部button全清除時，會清到其他控制項的問題
+2. DataManagement LoadFile/SaveFile 使用 XmlDocument改用 Linq to XML 的方式，避免讀寫檔案過久的問題
+
+2018/05/23 Kent v1.0.0.6
+===============================================
+1. 增加圖顯控件 DialogRun，可以使用於在動作執行緒中，另開執行緒執行其他動作的元件
+
+2018/05/08 Kent v1.0.0.6
+===============================================
+1. DRadioGroupBox 修正及新增
+   a. 修正輸入空白項目時，不會新增項目
+   b. 新增屬性 ItemTop/ItemLeft/ColCount/ItemFont
+   c. 新增事件 OnResize，當拉動元件時，自動調整項目位置
+2. 資料元件新增預設值屬性
+3. DRadioGroupButton 取消 ItemValue 屬性，改為 Item的Index值
+4. 圖顯元件 增加 BGColor 屬性
+
+2017/11/02 Kent v1.0.0.5
+===============================================
+1. TFieldCB修正，無選擇產品時，進入該表格，則自動選擇第一筆資料，有選擇產品，則自動選擇該筆資料
+2. TFieldCB修正，新增 TableLV 屬性，可設定該子表格內的 lvPackage 元件指標
+3. DMFieldLV 修正，自動調整 ListView 的欄位寬度
+4. DMFieldLV 修正，失去焦點時，具備HighLight效果
+5. 加入「圖顯控件」類 CheckButtonEx 控制項
+6. DMFieldLV 修正，SelectPackage後，可以自動捲動至可視位置 
+
+2017/04/01 Kent v1.0.0.4
+===============================================
+1. 新增 DDataGridView 資料編輯元件
+2. DataManagement 因應 DDataGridView 新增及修改 SetData/GetData/ReadValue/ReadTable/LoadFile/SaveFile
+3. TPackageData 因應 DDataGridView 新增及修改 ReadValue/ReadTable/Collect
+4. Snippet 因應 DDataGridView 修改 CanChange/ControlEnable/ControlEnableCallback/ReadField/WriteField 
+5. 元件庫整理
+6. MotorJogForm 整理
+7. 輸出 IOTable 時，依照 IOPort 作為排序條件
+8. MotorJogForm 新增 StopJog 函數供外部呼叫，在外部停止時，MotorJog也會停下Loop或Home的動作
+
+2017/01/21 Kent v1.0.0.3
+===============================================
+1. 修正 PakcageData 的 Collect，pDS.SourceName => pField.DataName(同一table，可給多個規格使用)
+2. DataManagement的Package設定加入產品建立日期及產品最後一次使用日期
+3. 因應Motor元件增加 MOTORTYPE，修正 IOMapping.cs
+4. 新增 ChangeData 函數，可以直接修正內部資料
+5. 修正DataManagement儲存/載入資料時 產品名稱自動+P，欄位名稱自動+F，解決
+   產品名稱或欄位名稱不能使用數字的問題
+6. 新增KeyPad 螢幕小鍵盤供呼叫
+7. 修改 TFieldCB 編輯按鈕無須 Disabled
+8. DMFieldLV 增加產品搜尋字串，輸入依指定字串執行關鍵字搜尋，並顯示於UI
+9. DMFieldLV 顯示元件增加失去焦點時，會高亮顯示
+10. TPackageData 增加 SetValue 方法
+11. DataManagement 存檔時，改以 UTF8 方式存出
+
+2017/01/03 Kent v1.0.0.2
+===============================================
+1. 修正 MotorJogForm 內，Teach ENC and Teach POS 內的 ReadRealPos => ReadPos
+2. 修正 DEdit 內的輸入鍵盤偵測 KeyPress => KeyDown，並加入 Ctrl+C and Ctrl+V
+3. 修正 io.xls tempfile 的路徑改為 c:\ => d:\ 避免因權限問題，無法複製
+
+2016/12/13 Kent v1.0.0.1
+===============================================
+1. 增加 DComboBox 元件

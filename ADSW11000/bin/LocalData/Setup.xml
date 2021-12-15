@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Table Version="V2" CreateTime="20200813164122" LastTime="">
+  <Fields>
+    <FEQPLoadTime Type="Int" Value="20" />
+    <F伺服錯誤需復歸 Type="Boolean" Value="False" />
+    <FSPCSetting Type="Table" Rows="2" Cols="3" Columns="colIndex,colName,colType">
+      <R0 colIndex="1" colName="產量" colType="Sum" />
+      <R1 colIndex="2" colName="產速" colType="Average" />
+    </FSPCSetting>
+    <FReportFileDir Type="String" Value="D:\" />
+    <FMeanTimeType Type="Int" Value="0" />
+    <FIO描述檔 Type="String" Value="" />
+    <F安全門機制設定 Type="String" Value="0" />
+    <FEQPSlowRunCycle Type="Int" Value="2" />
+    <FEQPSlowRunSpeed Type="Int" Value="10" />
+    <FZ2XBasePulse Type="Int" Value="12018705" />
+    <FZ1XBasePulse Type="Int" Value="-692339" />
+    <FUseDAQ Type="Boolean" Value="True" />
+  </Fields>
+</Table>

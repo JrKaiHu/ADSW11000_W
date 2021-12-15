@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Table Version="V2" CreateTime="20201112161512" LastTime="20210729151926">
+  <Fields>
+    <FPCBVacuumTime Type="Double" Value="5000" />
+    <FSpray_value Type="Double" Value="2.5" />
+    <FbRotate90In Type="Boolean" Value="False" />
+    <FbCleanBeforeLoad Type="Boolean" Value="False" />
+    <FbCleanAfterCut Type="Boolean" Value="True" />
+    <FSearchMark Type="Boolean" Value="True" />
+    <FbKerfVisionCheck Type="Boolean" Value="False" />
+    <FBallToEdgeLimit Type="Int" Value="30" />
+    <FPCBIn_Offsetθ Type="Double" Value="0" />
+    <FPCBIn_OffsetY Type="Int" Value="0" />
+    <FCuttingWidth Type="Int" Value="30" />
+    <FCuttingShift Type="Int" Value="20" />
+    <FPitch_tolerance Type="Int" Value="20" />
+    <FShower_value Type="Double" Value="2.5" />
+    <FPCBVacuumThreshold Type="Double" Value="-50" />
+    <FBaselineCutZ Type="Int" Value="2100" />
+    <FCut_U_tolerance Type="Double" Value="0.15" />
+    <FCut_X_tolerance Type="Int" Value="550" />
+    <FRubberThickness Type="Int" Value="1500" />
+    <FBladeZ2Data Type="SubPackage" FolderPath=".\LocalData\SubPackage\BladeZ2Data" Value="Kinsus" />
+    <FBladeZ1Data Type="SubPackage" FolderPath=".\LocalData\SubPackage\BladeZ1Data" Value="Kinsus" />
+    <FLengthF Type="Int" Value="241500" />
+    <FLengthE Type="Int" Value="290000" />
+    <FiZ2_FoucusPos Type="Int" Value="990" />
+    <FPitch_Y Type="Int" Value="12300" />
+    <FPCBThickness Type="Int" Value="580" />
+    <FNum_row Type="Int" Value="19" />
+    <FNum_col Type="Int" Value="23" />
+    <FPitch_X Type="Int" Value="12300" />
+    <FbInnerScan Type="Boolean" Value="False" />
+    <FIgnoreFindMark Type="Boolean" Value="False" />
+    <FCleanrBeforeLoad_count Type="Int" Value="1" />
+    <FCleanrBeforeLoad_freq Type="Int" Value="1" />
+    <FCleanrBeforeLoad_Delay Type="Int" Value="10" />
+    <FSpndle_rpm Type="Int" Value="23000" />
+    <FCutting_Delay Type="Int" Value="500" />
+    <FCleanAfterCut_count Type="Int" Value="1" />
+    <FCleanAfterCut_freq Type="Int" Value="1" />
+    <FCleanAfterCut_Delay Type="Int" Value="100" />
+    <FiRotateOutMode Type="Int" Value="0" />
+    <FCH_Bottom Type="Int" Value="3" />
+    <FCH_Top Type="Int" Value="1" />
+    <FCH_Left Type="Int" Value="2" />
+    <FCH_Right Type="Int" Value="0" />
+    <FSafeHeightH Type="Int" Value="500" />
+    <FCH4_TargetNumberN Type="Int" Value="0" />
+    <FCH4_TargetNumberF Type="Int" Value="0" />
+    <FCH3_TargetNumberN Type="Int" Value="0" />
+    <FCH3_TargetNumberF Type="Int" Value="0" />
+    <FCH2_TargetNumberN Type="Int" Value="0" />
+    <FCH2_TargetNumberF Type="Int" Value="0" />
+    <FCH1_TargetNumberN Type="Int" Value="0" />
+    <FCH1_TargetNumberF Type="Int" Value="0" />
+    <FCH1_TargetType Type="Int" Value="0" />
+    <FCH2_TargetType Type="Int" Value="0" />
+    <FCH3_TargetType Type="Int" Value="0" />
+    <FCH4_TargetType Type="Int" Value="0" />
+    <FTargetFind Type="String" Value="1" />
+    <FScanMethod Type="String" Value="0" />
+    <FDGVCutProg Type="Table" Rows="6" Cols="9" Columns="Cut_Index,Cut_Z1使用,Cut_Z1刀順,Cut_Z2使用,Cut_Z2刀順,Cut_高度偏移,Cut_切割方向,Cut_料片方向,Cut_速度">
+      <R0 Cut_Index="1" Cut_Z1使用="True" Cut_Z1刀順="6" Cut_Z2使用="True" Cut_Z2刀順="1" Cut_高度偏移="3000" Cut_切割方向="Type1" Cut_料片方向="CH2" Cut_速度="170" />
+      <R1 Cut_Index="2" Cut_Z1使用="True" Cut_Z1刀順="6" Cut_Z2使用="True" Cut_Z2刀順="1" Cut_高度偏移="3000" Cut_切割方向="Type1" Cut_料片方向="CH1" Cut_速度="170" />
+      <R2 Cut_Index="3" Cut_Z1使用="True" Cut_Z1刀順="4" Cut_Z2使用="True" Cut_Z2刀順="2" Cut_高度偏移="3000" Cut_切割方向="Type1" Cut_料片方向="CH2" Cut_速度="170" />
+      <R3 Cut_Index="4" Cut_Z1使用="True" Cut_Z1刀順="5" Cut_Z2使用="True" Cut_Z2刀順="3" Cut_高度偏移="3000" Cut_切割方向="Type1" Cut_料片方向="CH2" Cut_速度="170" />
+      <R4 Cut_Index="5" Cut_Z1使用="True" Cut_Z1刀順="4" Cut_Z2使用="True" Cut_Z2刀順="2" Cut_高度偏移="3000" Cut_切割方向="Type1" Cut_料片方向="CH1" Cut_速度="170" />
+      <R5 Cut_Index="6" Cut_Z1使用="True" Cut_Z1刀順="5" Cut_Z2使用="True" Cut_Z2刀順="3" Cut_高度偏移="3000" Cut_切割方向="Type1" Cut_料片方向="CH1" Cut_速度="170" />
+    </FDGVCutProg>
+    <F刀軸使用 Type="String" Value="0" />
+    <FDGVCleanBeforeLoad Type="Table" Rows="2" Cols="6" Columns="LoadClean_順序,LoadClean_Channel,LoadClean_水簾,LoadClean_氣簾,LoadClean_風刀,LoadClean_速度">
+      <R0 LoadClean_順序="1" LoadClean_Channel="CH1" LoadClean_水簾="True" LoadClean_氣簾="True" LoadClean_風刀="False" LoadClean_速度="100" />
+      <R1 LoadClean_順序="2" LoadClean_Channel="CH2" LoadClean_水簾="True" LoadClean_氣簾="True" LoadClean_風刀="False" LoadClean_速度="100" />
+    </FDGVCleanBeforeLoad>
+    <FDGVCleanAfterCut Type="Table" Rows="4" Cols="6" Columns="CutClean_順序,CutClean_Channel,CutClean_水簾,CutClean_氣簾,CutClean_風刀,CutClean_速度">
+      <R0 CutClean_順序="1" CutClean_Channel="CH1" CutClean_水簾="False" CutClean_氣簾="True" CutClean_風刀="False" CutClean_速度="100" />
+      <R1 CutClean_順序="2" CutClean_Channel="CH2" CutClean_水簾="False" CutClean_氣簾="True" CutClean_風刀="False" CutClean_速度="100" />
+      <R2 CutClean_順序="3" CutClean_Channel="CH1" CutClean_水簾="False" CutClean_氣簾="True" CutClean_風刀="False" CutClean_速度="100" />
+      <R3 CutClean_順序="4" CutClean_Channel="CH2" CutClean_水簾="False" CutClean_氣簾="True" CutClean_風刀="False" CutClean_速度="100" />
+    </FDGVCleanAfterCut>
+    <FDGVPreCutData Type="Table" Rows="0" Cols="3" Columns="PreCut_段號,PreCut_進刀速度,PreCut_條數" />
+    <FDGVFixtureData Type="Table" Rows="12" Cols="5" Columns="Fixture_LineNo,Fixture_Side,Fixture_X,Fixture_Angle,Fixture_XOffset">
+      <R0 Fixture_LineNo="1" Fixture_Side="CH2" Fixture_X="167886" Fixture_Angle="1068" Fixture_XOffset="0" />
+      <R1 Fixture_LineNo="2" Fixture_Side="CH2" Fixture_X="208186" Fixture_Angle="1068" Fixture_XOffset="0" />
+      <R2 Fixture_LineNo="3" Fixture_Side="CH2" Fixture_X="248486" Fixture_Angle="1068" Fixture_XOffset="0" />
+      <R3 Fixture_LineNo="4" Fixture_Side="CH2" Fixture_X="288786" Fixture_Angle="1068" Fixture_XOffset="0" />
+      <R4 Fixture_LineNo="5" Fixture_Side="CH2" Fixture_X="329086" Fixture_Angle="1068" Fixture_XOffset="0" />
+      <R5 Fixture_LineNo="6" Fixture_Side="CH2" Fixture_X="369386" Fixture_Angle="1068" Fixture_XOffset="0" />
+      <R6 Fixture_LineNo="1" Fixture_Side="CH1" Fixture_X="166675" Fixture_Angle="-1702715" Fixture_XOffset="0" />
+      <R7 Fixture_LineNo="2" Fixture_Side="CH1" Fixture_X="206975" Fixture_Angle="-1702715" Fixture_XOffset="0" />
+      <R8 Fixture_LineNo="3" Fixture_Side="CH1" Fixture_X="247275" Fixture_Angle="-1702715" Fixture_XOffset="0" />
+      <R9 Fixture_LineNo="4" Fixture_Side="CH1" Fixture_X="287575" Fixture_Angle="-1702715" Fixture_XOffset="0" />
+      <R10 Fixture_LineNo="5" Fixture_Side="CH1" Fixture_X="327875" Fixture_Angle="-1702715" Fixture_XOffset="0" />
+      <R11 Fixture_LineNo="6" Fixture_Side="CH1" Fixture_X="368175" Fixture_Angle="-1702715" Fixture_XOffset="0" />
+    </FDGVFixtureData>
+    <FDGVPCBData Type="Table" Rows="12" Cols="9" Columns="Scan_LineNo,Scan_Side,Scan_X1,Scan_Y1,Scan_X2,Scan_Y2,Scan_Z,Scan_Angle,Scan_XOffset">
+      <R0 Scan_LineNo="1" Scan_Side="CH2" Scan_X1="167886" Scan_Y1="361177" Scan_X2="167886" Scan_Y2="562695" Scan_Z="800" Scan_Angle="1068" Scan_XOffset="0" />
+      <R1 Scan_LineNo="2" Scan_Side="CH2" Scan_X1="208186" Scan_Y1="361177" Scan_X2="208186" Scan_Y2="562695" Scan_Z="800" Scan_Angle="1068" Scan_XOffset="0" />
+      <R2 Scan_LineNo="3" Scan_Side="CH2" Scan_X1="248486" Scan_Y1="361177" Scan_X2="248486" Scan_Y2="562695" Scan_Z="800" Scan_Angle="1068" Scan_XOffset="0" />
+      <R3 Scan_LineNo="4" Scan_Side="CH2" Scan_X1="288786" Scan_Y1="361177" Scan_X2="288786" Scan_Y2="562695" Scan_Z="800" Scan_Angle="1068" Scan_XOffset="0" />
+      <R4 Scan_LineNo="5" Scan_Side="CH2" Scan_X1="329086" Scan_Y1="361177" Scan_X2="329086" Scan_Y2="562695" Scan_Z="800" Scan_Angle="1068" Scan_XOffset="0" />
+      <R5 Scan_LineNo="6" Scan_Side="CH2" Scan_X1="369386" Scan_Y1="361177" Scan_X2="369386" Scan_Y2="562695" Scan_Z="800" Scan_Angle="1068" Scan_XOffset="0" />
+      <R6 Scan_LineNo="1" Scan_Side="CH1" Scan_X1="166675" Scan_Y1="361711" Scan_X2="166675" Scan_Y2="563237" Scan_Z="800" Scan_Angle="-1702715" Scan_XOffset="0" />
+      <R7 Scan_LineNo="2" Scan_Side="CH1" Scan_X1="206975" Scan_Y1="361711" Scan_X2="206975" Scan_Y2="563237" Scan_Z="800" Scan_Angle="-1702715" Scan_XOffset="0" />
+      <R8 Scan_LineNo="3" Scan_Side="CH1" Scan_X1="247275" Scan_Y1="361711" Scan_X2="247275" Scan_Y2="563237" Scan_Z="800" Scan_Angle="-1702715" Scan_XOffset="0" />
+      <R9 Scan_LineNo="4" Scan_Side="CH1" Scan_X1="287575" Scan_Y1="361711" Scan_X2="287575" Scan_Y2="563237" Scan_Z="800" Scan_Angle="-1702715" Scan_XOffset="0" />
+      <R10 Scan_LineNo="5" Scan_Side="CH1" Scan_X1="327875" Scan_Y1="361711" Scan_X2="327875" Scan_Y2="563237" Scan_Z="800" Scan_Angle="-1702715" Scan_XOffset="0" />
+      <R11 Scan_LineNo="6" Scan_Side="CH1" Scan_X1="368175" Scan_Y1="361711" Scan_X2="368175" Scan_Y2="563237" Scan_Z="800" Scan_Angle="-1702715" Scan_XOffset="0" />
+    </FDGVPCBData>
+    <FdWearlimitZ1 Type="Double" Value="3500" />
+    <FdLimitZ1 Type="Double" Value="6500" />
+    <FdFlangeZ1 Type="Double" Value="70" />
+    <FdRealMotorDistanceZ1 Type="Double" Value="411.13599" />
+    <FiSimMeasureZPosZ1 Type="Int" Value="-24306" />
+    <FiRealMeasureZPosZ1 Type="Int" Value="-12774" />
+    <FdRealKnifeRemainZ1 Type="Double" Value="3100" />
+    <FdKnifeDiameterZ1 Type="Double" Value="76.2" />
+    <FdWidthZ1 Type="Double" Value="0.3" />
+    <FsTypeZ1 Type="String" Value="Finest" />
+    <FsToolNameZ1 Type="String" Value="Test" />
+    <FdWearlimitZ2 Type="Double" Value="3500" />
+    <FdLimitZ2 Type="Double" Value="6500" />
+    <FdFlangeZ2 Type="Double" Value="70" />
+    <FdRealMotorDistanceZ2 Type="Double" Value="884.502" />
+    <FiSimMeasureZPosZ2 Type="Int" Value="-24280" />
+    <FiRealMeasureZPosZ2 Type="Int" Value="-11186" />
+    <FdRealKnifeRemainZ2 Type="Double" Value="3100" />
+    <FdKnifeDiameterZ2 Type="Double" Value="76.2" />
+    <FdWidthZ2 Type="Double" Value="0.3" />
+    <FsTypeZ2 Type="String" Value="Finest" />
+    <FsToolNameZ2 Type="String" Value="Test300" />
+    <F視覺軟體程式名稱 Type="String" Value="130x130_R17-014" />
+    <FDGVScanData Type="Table" Rows="12" Cols="9" Columns="Scan_LineNo,Scan_Side,Scan_X1,Scan_Y1,Scan_X2,Scan_Y2,Scan_Z,Scan_Angle,Scan_XOffset">
+      <R0 Scan_LineNo="1" Scan_Side="CH2" Scan_X1="167934" Scan_Y1="363000" Scan_X2="167934" Scan_Y2="564508" Scan_Z="2860" Scan_Angle="12912" Scan_XOffset="0" />
+      <R1 Scan_LineNo="2" Scan_Side="CH2" Scan_X1="208243" Scan_Y1="363000" Scan_X2="208243" Scan_Y2="564508" Scan_Z="2860" Scan_Angle="12912" Scan_XOffset="0" />
+      <R2 Scan_LineNo="3" Scan_Side="CH2" Scan_X1="248552" Scan_Y1="363000" Scan_X2="248552" Scan_Y2="564508" Scan_Z="2860" Scan_Angle="12912" Scan_XOffset="0" />
+      <R3 Scan_LineNo="4" Scan_Side="CH2" Scan_X1="288861" Scan_Y1="363000" Scan_X2="288861" Scan_Y2="564508" Scan_Z="2860" Scan_Angle="12912" Scan_XOffset="0" />
+      <R4 Scan_LineNo="5" Scan_Side="CH2" Scan_X1="329170" Scan_Y1="363000" Scan_X2="329170" Scan_Y2="564508" Scan_Z="2860" Scan_Angle="12912" Scan_XOffset="0" />
+      <R5 Scan_LineNo="6" Scan_Side="CH2" Scan_X1="369479" Scan_Y1="363000" Scan_X2="369479" Scan_Y2="564508" Scan_Z="2860" Scan_Angle="12912" Scan_XOffset="0" />
+      <R6 Scan_LineNo="1" Scan_Side="CH2" Scan_X1="168501" Scan_Y1="362347" Scan_X2="168501" Scan_Y2="563874" Scan_Z="2860" Scan_Angle="-1691286" Scan_XOffset="0" />
+      <R7 Scan_LineNo="2" Scan_Side="CH2" Scan_X1="208806" Scan_Y1="362347" Scan_X2="208806" Scan_Y2="563874" Scan_Z="2860" Scan_Angle="-1691286" Scan_XOffset="0" />
+      <R8 Scan_LineNo="3" Scan_Side="CH2" Scan_X1="249111" Scan_Y1="362347" Scan_X2="249111" Scan_Y2="563874" Scan_Z="2860" Scan_Angle="-1691286" Scan_XOffset="0" />
+      <R9 Scan_LineNo="4" Scan_Side="CH2" Scan_X1="289416" Scan_Y1="362347" Scan_X2="289416" Scan_Y2="563874" Scan_Z="2860" Scan_Angle="-1691286" Scan_XOffset="0" />
+      <R10 Scan_LineNo="5" Scan_Side="CH2" Scan_X1="329721" Scan_Y1="362347" Scan_X2="329721" Scan_Y2="563874" Scan_Z="2860" Scan_Angle="-1691286" Scan_XOffset="0" />
+      <R11 Scan_LineNo="6" Scan_Side="CH2" Scan_X1="370026" Scan_Y1="362347" Scan_X2="370026" Scan_Y2="563874" Scan_Z="2860" Scan_Angle="-1691286" Scan_XOffset="0" />
+    </FDGVScanData>
+    <FbVisionSaw Type="Boolean" Value="False" />
+    <FbCH2Between Type="Boolean" Value="False" />
+    <FbCH1Between Type="Boolean" Value="False" />
+    <FBaselineOffsetZ Type="Int" Value="2200" />
+    <FdDataGridView_料片規格 Type="Table" Rows="0" Cols="9" Columns="dataGridViewComboBoxColumn_料片規格_該面名稱定義,dataGridViewTextBoxColumn_料片規格_水平方向間距A,dataGridViewTextBoxColumn_料片規格_水平方向個數C,dataGridViewTextBoxColumn_料片規格_水平方向板寬E,dataGridViewTextBoxColumn_料片規格_垂直方向間距B,dataGridViewTextBoxColumn_料片規格_垂直方向個數D,dataGridViewTextBoxColumn_料片規格_垂直方向板寬F,dataGridViewTextBoxColumn_料片規格_料片厚度,dataGridViewTextBoxColumn_料片規格_視覺焦距" />
+    <FiRotateInMode Type="Int" Value="0" />
+    <FbUsecut Type="Boolean" Value="True" />
+  </Fields>
+</Table>

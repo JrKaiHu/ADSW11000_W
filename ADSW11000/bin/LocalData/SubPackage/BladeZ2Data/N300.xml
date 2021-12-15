@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Table Version="V2" CreateTime="20201031115726" LastTime="">
+  <Fields>
+    <FdWearlimitZ2 Type="Double" Value="3.1" />
+    <FdLimitZ2 Type="Double" Value="6500" />
+    <FdFlangeZ2 Type="Double" Value="70" />
+    <FdRealMotorDistanceZ2 Type="Double" Value="200.819069" />
+    <FiSimMeasureZPosZ2 Type="Int" Value="0" />
+    <FiRealMeasureZPosZ2 Type="Int" Value="0" />
+    <FdRealMotorDistanceZ2 Type="String" Value="125.332408" />
+    <FdKnifeDiameterZ2 Type="Double" Value="76.2" />
+    <FdWidthZ2 Type="Double" Value="0.3" />
+    <FsTypeZ2 Type="String" Value="Finest" />
+    <FsToolNameZ2 Type="String" Value="N300" />
+    <FdRealKnifeRemainZ2 Type="Double" Value="3" />
+  </Fields>
+</Table>

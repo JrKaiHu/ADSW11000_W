@@ -1,0 +1,620 @@
+********************************************************************************
+/*!
+ * @  Library:ProVLib
+ * @  author: Max
+ * @  purpose: 提供馬達、IO、AIO、FlowChart等控制項
+ * @  .NET Framework: 4.5
+ */
+********************************************************************************
+2021/04/27 By Max v1.1.3.2
+1. MNETMotor修改YASKAWA BasePulse的設定方式
+2. MNETMotor修改HomeByAbsEncoder的歸零流程，發生與BasePulse差異太大的狀況時，直接跳至最後一個Case，避免一直循環重複
+
+2021/03/3 By Max v1.1.3.1
+1. 修改AdvanMotor類別，將所有呼叫軸卡API的回傳值如有異常則發警報
+
+2021/02/22 By Max v1.1.3.0
+1. 修改MNEetMotor讀取YASKAWA絕對式光學尺讀值，若讀值為0，則直接用極限Sensor歸零後的點位當成歸零位置
+2. 修改YaskawaAbsEncReader讀取YASKAWA絕對式光學尺讀值，增加重試功能
+3. 修正里程數功能LifeTime.xml的寫入與讀出的Bugs，Table存在與否的判斷
+
+2021/02/17 By Max v1.1.2.9
+1. 調整ObjFormFreshIO與ObjFormFre的Spin.SpinUntil函式呼叫位置至計算掃描時間之後
+2. IOHSLObj.cs的Out函式在Retry之間加入Spin.SpinUntil 100ms 的Delay
+
+2021/01/29 By Max v1.1.2.8
+1. ADV1203 EtherCAT通訊控制卡相關程式小修正
+
+2021/01/29 By Max v1.1.2.8
+1. ADV1203 EtherCAT通訊控制卡相關程式更新
+
+2021/01/27 By Max v1.1.2.7
+1. 修正里程數功能LifeTime.xml的寫入與讀出的Bugs
+
+2021/01/11 By Max v1.1.2.6
+1. MNETMotor修改YASKAWA歸零檢查範圍10改為20
+
+2020/12/28 By Max v1.1.2.5
+1. TrayView元件修改DataUpdate函式，Invoke改為BeginInvoke以加快畫面更新的效能
+
+2020/12/25 By Max v1.1.2.4
+1. Motor元件新增SlaveIOPort屬性以支援PCI-1285軸卡龍門功能
+2. AdvanMotor類別新增支援龍門功能
+
+2020/11/25 By Max v1.1.2.3
+1. DMCNET 新增16In/16Out模組支援
+
+2020/11/10 By Max v1.1.2.2
+1. 修改MNetMotor與DMCNetMotor馬達使用Z相歸零時加入HomePos的移動
+
+2020/11/09 By Max v1.1.2.1
+1. 修改MotorType為YASKAWA_ABS時的歸零方式，先以極限Sensor歸零再移動至BasePulse設定位置
+2. IOHSLObj修改Init函式判斷模組需不需要掃描，失敗後將bStarHSLFieldFailed變數設定為True導致I/O無法作動的問題
+
+2020/10/22 By Max v1.1.2.0
+1. TaryData修正當 TrayZero 屬性設定為 Zero_LeftTop 與 Zero_RightTop 時，GetCell () 回傳的 Point Pos 參數值取放點位的 Pos.Y 不正確的問題。
+
+2020/10/22 By Max v1.1.1.9
+1. MotorType新增YASKAWA_ABS，以支援Renishaw絕對式光學尺的讀取歸零方式
+
+2020/09/22 By Max v1.1.1.8
+1. Motor元件新增EnabledJitterDetect與DisableJitterDetect函式，啟動期間偵測Encoder的最大與最小值，關閉時回傳抖動範圍
+
+2020/09/01 By Max v1.1.1.7
+1. ObjFormFreshMotor與ObjFormFreshIO的Thread.Sleep改為SpinWait.SpinUnitl
+
+2020/08/31 By Max v1.1.1.6
+1. ObjFormFreshMotor將Sleep的時間由1改為10，以減少CPU的使用率 
+
+2020/08/05 By Max v1.1.1.5
+1. FlowChart元件判斷IsAllSlowCycleDone的邏輯錯誤的Bugs
+2. FlowChart元件新增IsFlowHead屬性用以判斷是否為流程頭
+3. FlowChart元件判斷是否為流程頭並將其加入FCHeadSet的程式碼由OnCreateControl移至ObjInit函式
+
+2020/08/03 By Max v1.1.1.4
+1. OutBit元件新增記錄同樣IOPort的元件Map，處理Output狀態同步的問題
+
+2020/07/30 By Max v1.1.1.3
+1. AdvECAT馬達新增Trigger軸功能
+2. MotorParameter結構新增TriAxis欄位
+
+2020/07/24 By Max v1.1.1.2
+1. 修正TAsyncMsgFlusher因加入自行指定Log檔名機制而導致原來Log機制產生Bugs的問題
+
+2020/07/10 By Max v1.1.1.1
+1. 修改TrayData，移除BinDataType結構中的Value欄位以及相關的函式以解決資料設定不正確的問題
+
+2020/07/08 By Max v1.1.1.0
+1. 修改TAsyncMsgFlusher, 新增LogFileName屬性，提供設定Log檔名設定，DataFormat參數須設定為大於1才有作用
+
+2020/07/08 By Max v1.1.0.9
+1. 修改Outbit Valueg屬性的getter，由傳回SMValue改為outBitObj.In()
+2. 修改IOHSLObj的In函式，由傳回元件紀錄的狀態改為直接讀取HSL API的資料
+
+2020/07/07 By Max v1.1.0.8
+1. 修改Outbit的ObjFresh函示式，移除由IOBitObj.In()讀取SMValue的程式碼，以避免資料錯亂
+
+2020/07/06 By Max v1.1.0.7
+1. 修正MyTimer設定IsStopable為True時，停止計時的行為僅在第一次有效的Bugs
+
+2020/07/03 By Max v1.1.0.6
+1. 修改TAsyncMsgFlusher實作IDisposable介面
+2. 修改TAsyncMsgFlusher的LoggerEventHandler，將Queue改為ConcurrentQueue，並將寫檔動作由一條一條改為批次寫入
+3. TrayData修正GetCell時計算完成後再一併更新TrayView以改善速度
+
+2020/06/30 By Max v1.1.0.5
+1. HSL DI/DO 更改讀取方式，由以Channel為單位改為以Slave為單位
+2. 硬體狀態更新執行緒改為Motor與IO分開
+
+2020/06/29 By Max v1.1.0.4
+1. 修改Outbit元件輸出的行為，由直接呼叫硬體API立即輸出改為將資料更新至記憶體再由執行緒週期性做更新
+2. Outbit的IsSafeToAction事件的執行時機修改為僅有輸出的狀態有改變時才會執行
+3. TObjForm新增KernelScanTim靜態屬性，以取得硬體狀態更新執行緒的掃描時間，取得方式TObjForm.KernelScanTime
+
+2020/06/18 By Max v1.1.0.3
+1. 修正MNETHSLCard中Locker屬性回傳屬性本身造成StackOverFlow的例外
+
+2020/06/18 By Max v1.1.0.2
+1. 修改Outbit元件的IsSafeToAction事件，增加sender參數以傳出this
+2. 增加Lock機制，處理HSL Output元件的存取時的同步行為
+3. DMCNetMotor 增加處理-5001（正負極限）、-5002（負極限）、-5003（正極限）、-5004（驅動器故障）與-5009（緊急停止）錯誤碼
+
+2020/06/16 By Max v1.1.0.1
+1. HSL Output元件的Out與In函示移除斷線偵測（直接操作記憶體，重新連上線後會自動更新至模組）
+2. HSL Output元件的Out函式Retry For迴圈移除Sleep指令
+
+2020/05/07 By Max v1.1.0.0
+1. DMCNetMotor新增GetServoParameter與SetServoParameter函式
+2. DMCNetMotor Init函式新增設定P1-46參數以配合Trigger參考計數
+3. FlowChart的FlowSelector功能新增S與E選項以便設定StartFC與EndFC
+4. FlowChart修改在子FlowChart中加入不小心設定到Parent的檢查
+5. MyTimer的SetSystemStop增加IsSystemStop旗標的判斷，以避免重複呼叫導致Timer未隨著系統暫停而停止計數
+6. TObjForm新增SysRun靜態屬性以記錄目前系統的運行狀態
+
+2020/05/05 By Max v1.0.9.9
+1. DMCCard修正IsBSeriesServoMotor靜態函式的筆誤誤植為MSeries
+
+2020/04/29 By Max v1.0.9.9
+1. Outbit元件新增輸出時檢查連線狀態以及重試功能
+
+2020/04/22 By Max v1.0.9.8
+1. 新增RTEX軸卡支援
+2. 修正PitchCompensation補償查表的Bugs
+
+2020/04/20 By Max v1.0.9.7
+1. 修正DMCCard與DMCMotor以支援B3F系列伺服驅動器
+
+2020/03/06 By Max v1.0.9.6
+1. 修正MMNET馬達Busy函式中讀取motion_io_status的函式
+
+2020/02/11 By Max v1.0.9.5
+1. FlowChart新增IsAllSlowCycleDone靜態屬性，判斷是否所有的FlowChart循環開頭都已執行完慢速循環
+2. Motor元件修改ObjFresh函式中的GetAlarmStatus呼叫以處理關閉模組時還回呼叫該模組的GetAlarmStatus函式，導致資源被吃掉的問題
+
+2020/02/06 By Max v1.0.9.4
+1. FlowChart新增SlowRunCycle屬性，ResetRunCycle靜態函式與HeadFCList靜態屬性以支援機台故障排除後以慢速Run設定的Cycle功能
+
+2019/12/05 By Max v1.0.9.3
+1. 修改TAsyncMsgFlusher，新增FileIOExceptionDelegate處理寫入Log時，Log檔案正被開啟而無法寫入，利用此委派通知Handler端
+
+2019/11/13 By Max v1.0.9.2
+1. 修改PitchCompensation.cs讀取RTL，分割字串的Bugs
+
+2019/11/05 By Max v1.0.9.1
+1. Motor元件ECMPSRC新增CMPSRC_None以DMCNetMotor處理非Trigger軸在歸零完成後將Trigger軸的座標設定為零的錯誤
+
+2019/10/23 By Max v1.0.9.0
+1. ProVBaseActor.cs新增Reset函式，可將Actor中的Message清除
+
+2019/08/14 By Max v1.0.8.9
+1. TrayData元件新增保護ShowVCLList List的Locker，以避免集合已修改，列舉尚未執行的例外
+2. 檢查馬達回授值與目標點位誤差是否超出AcceptDiffRange，如超出則將ErrID設定為31，AlarmTable需增加ErrCode 31的錯誤內容
+3. TrayView元件新增AddSelectBinToArray與DelSelectBinFormArray函式以記錄或移除框選時，要排除的Bin個數
+4. 修改DMCNETMotor，在歸零期間停止，則呼叫HomeReset讓歸零流程重作
+
+2019/08/01 By Max v1.0.8.8
+1. 更新研華EtherCAT卡片相關檔案
+
+2019/07/29 By Max v1.0.8.7
+1. ProVBaseActor 新增ExpressTree深層複製方式的Class
+2. TrayData修改StrToArray函式，將第二參數ref byte[] 改為 ref List<byte>, 以處理BinType超過10種時會出現例外的問題
+
+2019/07/15 By Max v1.0.8.6
+1. 修改Motor元件AcceptDiffRange超出時ErrID由30改為31
+2. 修改Motor元件G00函式，保留兩個重載G00(int iPos) 與 G00(int iPos, int OffsetPos)
+
+2019/07/11 By Max v1.0.8.6
+1. Motor元件新增AcceptDiffRange屬性，設定值大於0時，會在G00完成時檢查馬達回授值與目標點位誤差是否超出AcceptDiffRange，如超出則將ErrID設定為30，AlarmTable需增加ErrCode30的錯誤內容
+2. TAsyncMsgFlusher元件修改AddMsg參數一為Path的函式，使這一個AddMsg重載可以即時改變Log檔的存檔路徑
+
+2019/07/01 By Max v1.0.8.5
+1. Motor元件修改MNetMotor的MNETAddress函式，以解決站號超過第10站時解析錯誤的問題
+2. FlowChart新增ContinueRun屬性，方便Handler的MainFlow在多流程同時執行時可以利用此變數來控制
+3. TrayView元件修改無法顯示Bin值的問題
+
+2019/05/11 By Max v1.0.8.4
+1. FlowChart元件新增SourceFlowChart屬性，以取得此FlowChart上一個FlowChart是誰
+
+2019/03/11 By Max v1.0.8.3
+1. DMCMotor元件新增IsELSensorB 功能，讓極限Sensor也能做極性設定
+
+2019/02/13 By Max v1.0.8.2
+1. Motor.cs 修改RelCurrentPos屬性，加入判斷是否為DesignMode以解決設計階段由工具箱將馬達拉至Form上時會因motorObj尚未建立而將MsgID設定成-5010
+
+2018/12/19 By Max v1.0.8.1
+1. 修正MNET馬達元件歸零時出現參數不合法的錯誤碼
+
+2018/12/05 By Max v1.0.8.0
+1. 修正MC8040軸卡因使用步進馬達未判斷ServoAlarm旗標導致一直Show Alarm
+2. 修正MC8040軸卡設定加減速時，直如未0導致除0的錯誤
+
+2018/12/04 By Max v1.0.7.9
+1. 修正TVICPort_cs.cs，WritePort的CharSet Attribute將Unicode移除使其使用預設的Ansi設定
+
+2018/12/03 By Max v1.0.7.8
+1. 修正IOISABusObj.cs 同一PortID的值未紀錄的Bugs
+
+2018/11/28 By Max v1.0.7.7
+1. MNetMotor修改RealG00函式中PositionOverride沒有設定家減速參數的Bug，並將設定時機改為Busy時再做設定，靜止時不做設定。
+
+2018/11/28 By Max v1.0.7.6
+1. Motor元件新增IsELSensorB 功能，讓極限Sensor也能做極性設定
+
+2018/11/09 By Max v1.0.7.5
+1. MNetMotor 修正Position Override在齒輪比不是1的情形下移動點位不正確的Bug
+
+2018/11/05 By Max v1.0.7.5
+1. MNetMotor 修改G00函式，提供Position Override功能，到達目標點前更新目標位置，會移動至新的目標位置
+
+2018/10/29 By Max v1.0.7.4
+1. 新增ISA Bus卡片支援（MC8040卡與P64/C64 IO卡），MC8040軸卡HomeByHomeSensor歸零方式尚未測試成功
+
+2018/10/17 By Max v1.0.7.3
+1. 修正Motor元件以極限Sensor歸零的次數，由兩次改為一次
+2. 修改Motor元件碰觸極限的Alarm發出時機，在G00或Jog移動時發出，歸零期間不發出
+3. 新增Motor元件左右極限同時作用的Alarm全時偵測
+
+2018/10/15 By Max v1.0.7.2
+1. 移除各馬達元件在歸零期間檢查正轉極限與反轉極限同時作用的警報
+
+2018/09/25 Max v1.0.7.1
+1. 移除UIActor元件
+2. ProVBaseActor 新增ActionMode屬性，控制OnActorRun事件執行的模式，設定為UIMode時，OnActorRun由UI執行緒同步執行，TaskMode時由獨立執行緒執行 
+
+2018/09/25 Max v1.0.7.0
+1. MNetMotor新增G01（直線補間移動功能）
+
+2018/09/20 Max v1.0.6.9
+1. UIActor 新增 InvokeMode屬性提供設定執行OnUpdateUI時的機制使使用同步或是非同步呼叫
+
+2018/09/17 Max v1.0.6.8
+1. 移除ObjectExtension.cs
+
+2018/09/17 Max v1.0.6.7
+1. MNetMotor 在 Stop與FastStop函式中加入HomeTask=1 的設定，以確保歸零過程中被停止或Alarm停止能夠重新執行歸零流程
+2. ProVBaseActor 深層複製使用Reflection機制
+
+2018/09/13 Max v1.0.6.6
+1. UIActor建構式加入IntPtr ptr = this.Handle以避免Handle為建立的問題
+
+2018/09/12 Max v1.0.6.6
+1. 修改UIActor的OnUpdateUI事件傳回值，由void改為ProVMessage，如OnUpdateUI事件傳回值為null則Message不再往下一Actor傳遞
+
+2018/09/10 Max v1.0.6.5
+1. TrayData程式碼整理
+
+2018/09/7 Max v1.0.6.5
+1. TrayData修正蛇行取放拾取放計算異常的問題，若吸嘴數量為N X M，N > 1與 M >1 尚未解決
+
+2018/09/5 Max v1.0.6.4
+1. TrayData修正蛇行取放拾取放計算異常的問題
+
+2018/08/21 Max v1.0.6.3
+1. MNetMotor新增如未ServoOn移動馬達會顯示Alarm，Servo Not Activated!
+
+2018/08/09 Max v1.0.6.2
+1. ObjForm.cs ObjShowFresh 函式顯示是否正在執行的判斷是否為FlowChart
+2. MotorFilterDesigner.cs 新增AntiCollisionMode Shadow Property以處理顯示或隱藏防撞相關屬性
+3. FlowChart 使用 JumpTo 函式跳至指定的FlowChart，該FlowChart在下次執行時會從該FlowChart開始執行
+
+2018/08/08 Max v1.0.6.2
+1. FlowChart.cs 新增JumpTo函式，可將流程直接跳至參數指定的FlowChart（注意：此參數指定的FlowChart已執行完畢，再次呼叫MainRun時是執行下一個FlowChart）
+2. Motor.cs 新增ActionMode屬性，可設定此馬達是否要進行防撞保護移動，ACTIVE表示會讓位移動、PASSIVE表示需在AlwaysRun呼叫IsSafeToRun來判斷是否危險移動、NONE表示未使用防撞保護移動
+3. Motor.cs 新增LineID、PriorityHigh與PriorityLow屬性供防撞機制做設定，同一LineID會進行防撞保護檢查
+4. Motor.cs G00函式加入小曹的防撞邏輯，可透過ActionMode來啟用、SetHighPriority與SetLowPriority來決定誰該讓位的設定（低需讓高）
+5. ProVBaseActor 新增ActorSelector UI設定Next的功能
+6. ProVSDK 新增UIActor元件，提供使用Actor Model時有存取UI的屬性時可使用
+
+2018/07/30 By Max (v1.0.6.1)
+1. 修正Commit格式
+
+2018/07/30 (v1.0.6.1) By Max
+1. FlowChart 修正利用FlowSelector設定NEXT等屬性未設定成功的Bug
+
+2018/05/23 (v1.0.6.0) By Max
+1. 移除 ProVBaseActor ActorTask Virtual Member Function，繼承者利用+=運算子來實作OnActorRun事件
+
+2018/05/21 (v1.0.5.9) By Max
+1. Motor元件移除HW_相關屬性
+2. VirtualMotor與VirtualCard移除HW_相關設定
+3. VirtualCard中VirtualMotor結構移除HW_相關欄位
+
+2018/05/19 (v1.0.5.8) By Max
+1. Motor.cs 修改各軸卡檢查IOPort函式，如為空字串或NULl則將Enabled與Visiable設定成False
+2. Motor.cs Overload G00函式，新增OffsetValue函式，使用情境為開補償但是該次移動不想做查表移動，則將想要移動的Offset量由OffsetValue傳入
+3. Motor.cs 修改歸零函式，只要是模擬設定則直接將Pos與EncPos設定為0即回傳True
+4. ProVBaseActor 新增BeforeRun 事件與ActorTask member function
+5. VirtualCard 修改AddVirtualMotor函式中設定MotorData.Dir，將Dir的設定由HW_Dir改為Direction
+6. VirtualMotor修改相關函式使得送至ShareMemory的Pulse極為實際要移動的物理單位
+
+* 2018/05/15
+1. Add ProVBaseActor Control to Version Control
+
+2018/05/03(v1.0.5.7) By Max
+1. MNETMotor修改AlarmReset函式，判斷是否有驅動器故障來決定是否輸出DO來清除Alarm
+2. Motor修正SetDO函式，新增第二參數ChannelNO以控制要輸出哪一個Channel（MNetMotor有兩個DO）
+3. TAsyncMsgFlusher 利用DateFormat參數設定大於1控制使用PreFix參數當Log檔名
+
+2018/04/24(v1.0.5.6) By Max
+1. 各馬達元件在Stop與FastStop韓世忠加入RunningHome = false的設定
+2. 加入研華EtherCAT元件
+3. 修正PSIO IO卡IO Port解碼的Bug
+4. 修正MNetMotor Trigger寬度設定的Bug
+5. 修改ObjForm.cs OnClick中ProVOnClick的呼叫參數由sender改this
+6. TAsyncMsgFlusher新增FileExt變數以記錄Log檔的副檔名
+7. TAsyncMsgFlusher新增SplitWithTab屬性以設定時間與日期要以逗點或是Tab隔開
+8. TAsyncMsgFlusher新增HeadAdded屬性以設定Log新增至顯示元件上是用Add或是Insert
+
+2018/03/26(v1.0.5.5) By Max
+1. DMCCard.cs 修改CheckDMCStatus函式，由檢查Mater改為Slave
+2. DMCMotor.cs GetAlarmStatus加入CheckDMCStatus函式呼叫
+3. MNetMotor.cs 修改SetSpeed函式判斷設定的速度以改變MaxPPS的設定
+
+2018/03/20(v1.0.5.4) By Max
+1. Remove ProVUtilityLib
+2. Remove ProVSECSLib
+3. Remove DataPos
+4. Remove DemoControl
+5. Remove MotorJog
+6. Remove MotorP
+7. Remove MotorParamForm
+8. Remove RTControl
+9. Remove TFlowChart relative Files
+10. DMCNetCard.cs Public CloseCard Function
+11. Remove LED Control
+12. TrayView.cs StepColor with LBColorManager
+
+2018/03/06(v1.0.5.3) By Max
+1. InBit/OutBit元件新增PSIO I/O卡支援
+2. ProVSECSEngine修改AutoRun函式由Thread改為高精度Timer觸發
+
+2018/02/08(v1.0.5.2) By Max
+1. MNetMotor元件初始畫軸卡參數新增PRA_EL_MODE=1為碰觸極限時急停
+
+2018/01/31(v1.0.5.1) By Max
+1. Motor元件軸卡形式設定的屬性移除將IOPort設定為000的程式碼
+2. ObjectFormAlarmReset移除馬達元件AlarmReset的呼叫 
+
+2018/01/18(v1.0.5.0) By Max
+1. TAsyncMsgFlusher 修改建構式新增DateFormat參數可供切換Log檔名格式為無中文
+
+2018/01/16(v1.0.5.0) By Max
+1. MNetMotor.cs 修改SetAcceleration與SetDeceleration函式，在設定前先判斷Busy
+
+2018/01/12(v1.0.5.0) By Max
+1. DMCNetMotor.cs 修改Z相歸零讀取Encoder位置後社訂製Command位置然後再移動至0
+2. MNetMotor.cs 開啟Z相訊號反向功能
+3. Motor.cs 開啟Z相訊號反向功能
+
+2018/01/09(v1.0.5.0) By Max
+1. Motor 元件新增IsUseMileage屬性、Mileage屬性與ResetMileage函式以提供紀錄里程數功能
+2. Outbit元件新增IsUseActionCount屬性、ActionCount屬性與ResetActionCount函式以提供使用次數功能
+3. ObjForm 類別新增ObjFormClose Static函式提供關閉程式時將Motor元件有使用紀錄里程數功能的馬達里程數與Outbit元件有使用紀錄使用次數功能的次數記錄至檔案
+
+2018/01/05(v1.0.4.9) By Max
+1. Motor元件新增ZPhaseLogic 屬性，目前僅MNetMotor可做設定
+2. PitchCompensation修改RTL檔如有多趟資料會造成補償值不正確的Bugs
+
+2017/10/18(v1.0.4.8) By Max
+1. MNetMotor新增ContinueMove功能
+
+2017/09/29(v1.0.4.7) By Max
+1. TAsyncMsgFlusher.cs 修改MsgList.Insert改為Add以解決Displayer顯示不正確的問題
+2. 修改 ProVClientSocket 與 ProVServerSocket
+3. MNetMotor.cs 修正HomByLimitSensor時左右極限同時遮到的判斷Bugs
+
+2017/09/20(v1.0.4.6) By Max
+1. MNetMotor HomeByHomeSensor中使用Z相的部分，修改為完成後讀取Encoder值再設定給Command後並移動到0的位置
+
+2017/09/16(v1.0.4.5) By Max
+1. ProVClientSocket Disconnect 函式移除事件的呼叫
+
+2017/04/1(v1.0.4.4) By Max
+1. AnalogIn 元件新增IsUpDate屬性，使用者設定此旗標為False，接著檢查此旗標變更為True時表示類比值已更新
+2. VirtualCard類別在建立ShareMemory時用Try/Catch避免發生例外
+3. VirtualThread在進行IO與馬達掃描時用Try/Catch以避免發生例外
+
+2017/03/14(v1.0.4.3) By Max
+1. 修改AnalogIn元件顯示值預設為即時值（原為平均值）
+2. 修改DMCNETMotor與MNetMotor的GetAlarmStatus函式，由參數傳入isRunningHome改為MotorBase的RunningHome屬性
+3. InBit元件取消如設定為模擬時亂數輸出的設定
+4. Motor元件新增HomeOK屬性
+5. MotorParameter結構新增ObjType屬性給模擬器使用
+6. ObjForm中掃描IO執行緒與ShowIO Timer由建構式改到ObjFormInit函式
+7. TrayData新增TargetMPos與TargetBPos史資料能夠互相設定
+8. VirtualCard中的VirtualMotorStruct新增ObjType欄位
+
+2017/03/01(v1.0.4.2) By Max
+1. ProVUtilityLib併入ProVSDK專案
+2. ProVSECSEngine併入ProVSDK專案
+
+2017/03/01(v1.0.4.1) By Max
+1. TrayView與TrayData 新增Booking並在TrayView顯示功能
+2. MNETMotor修正Panasonic A6絕對式編碼器數值讀取後計算的Bug
+
+2017/02/23(v1.0.4.0) By Max
+1. MNETMotor新增ServoPolarity與AlarmPolarity設定功能
+2. PanasonicAbsEncReader 修正COM Por未接線至驅動器時卡住的問題
+3. Motor元件提供BasePulseCount屬性儲存A6絕對型編碼器歸零多圈數值後的單圈數值（單圈數值無法歸零）
+
+2017/02/17(v1.0.3.9) By Max
+1. Motor元件新增IsHomeOn唯讀屬性，可直接取得Home Sensor狀態
+2. 修改個馬達以及IO 類別的存取修飾子為internal
+3. AnalogIn元件新增ConvertFactor屬性
+4. AnalogIn元件新增ShowRealVal屬性，設定是否顯示元件物理量值
+5. AnalogIn元件新增RealValue與RealAvgValue儲存元件物理量值與元件平均物理量值
+6. 修正Panasonic A6驅動器絕對式編碼緝讀取物件建立後因判斷式導致第二軸馬達不會讀取絕對是編碼器的值
+
+2017/02/07(v1.0.3.8) By Max
+1. Motor元件新增MotorType為Panasonic_A6選項，提供馬達元件初始化時讀取絕對式編碼器的值並設定到元件的命令位置與回授位置
+2. Motor元件新增ResetAbsEncoderPos函式，提供Panasonic_A6絕對型編碼器驅動器設定基準點位偏差值（歸零多圈數據時當下的單圈數據值）
+
+2017/01/25(v1.0.3.7) By Max
+1. 馬達元件新增MotorType屬性，提供控制特殊馬達時使用，如OrientalMotor AZD-C 絕對型編碼器。
+2. MNetMotor新增GetDI功能，SetDO函式新增Channel參數，可供設定輸出哪一個Channel。
+
+2017/01/19(v1.0.3.6) By Max
+1. FlowChart新增NowTask屬性
+
+2016/12/02(v1.0.3.5) By Max
+1. 修改SyntekMotor SetPos與SetEncPos函式，實作內容均呼叫順序為SetPostion後SetCommand
+2. 修改MotorDesigner，判斷MotionCard選擇來適當隱藏某些屬性
+
+2016/12/01(v1.0.3.4) By Max
+1. Motor元件的屬性設定移除TypeEditor設定方式，直接於屬性編輯器作設定
+2. Motor元件的歸零模式由屬性IsUseHomeSensor與IsUseZPhase的True/False組合統一改為HomeMode列舉作設定
+3. DMCNetMotor的PulseCtrlMode屬性預設值由PLSDIR_1改為為CWCCW_1
+
+2016/11/28(v1.0.3.3) By Max
+1. TrayView元件新增DoubleBufferedOn屬性
+
+2016/11/28(v1.0.3.2) By Max
+1. 修改DMCNetMotor與SYNTEKMotor元件歸零流程，在HomeConfig/HomeMove後加一Delay再檢查IsHoming，避免模式尚未切換至Home模式
+2. 修改DMCNetMotor與SYNTEKMotor元件，將SetCompareSourcePos函式包含進SetPos與SetEncoderPos函式，並加上齒輪比運算
+
+2016/11/09(v1.0.3.1) By Max
+1. 修改馬達元件SetSoftLimit設定正轉軟體極限設定至馬達參數結構的復軟體極限的Bugs
+2. SYNTEKMotor 修改DecodeIOPort站號判斷小於等於0改為小於0
+3. OutBit新增InitOK旗標，防止未初始化完成元件在初始化時透過InitialComponent函式設定Value屬性導致發出Alarm
+
+2016/11/07(v1.0.3.0) By Max
+1. IsSimulation旗標由boolean改為int
+2. TrayData修正GetLayoutBin未去掉字串最後的逗點的Bugs
+3. TrayView將ColorCount由成員改為屬性，並將Getter回傳fBinColorList的數量
+4. FlowChart新增IsSelfParentSet函式檢查是否由子流程設定NEXT或CASEN後刪除導致VS擋掉的問題
+5. FlowChart StartFC與EndFC屬性設定中修正IsStartFC與IsEndFC的設定使得UI顯示正常
+6. FlowChart 在建構式中新增一些變數初始化的設定
+7. FlowChartDesigner中FlowSelector.Instance.OnSelectFCCallback設定調整位置，解決設定不正確的問題
+8. FlowSelector中隱藏自己的函式呼叫調整至btnCancel按鈕中
+
+2016/10/26(v1.0.2.9) By Max
+1. 修正TrayData.cs XN、YN、XPitch、YPitch、XBlock與YBlock屬性設定為0時強制改為1
+2. AnalogOut用鍵盤控制TrackBar時的Bugs
+3. 修正所有元件由工具箱拉至設計頁面時元件的尺寸一致性（200,30）
+
+2016/10/24(v1.0.2.8) By Max
+1. MotorJogForm修正RadioButton 設定U軸問題
+2. FlowChartDesigner WndProc新增LButtonDown訊息找最上層元件功能中UserControl與null判斷
+3. Motor.cs修正判斷IO Port合理性函式的Bugs
+
+2016/10/18(v1.0.2.7) By Max
+1. VirtualCard.cs 初始化SharedMemory中Index欄位成1
+2. AnalogOut元件新增Label顯示當下的設定值
+3. AnalogIn元件新增AvgVal屬性以供取得平均值（100次），點選顯示Label可切換平均值或即時值
+4. AnalogIn元件可透過ShowAvgVal屬性設定顯示平均值或即時值
+
+2016/10/12(v1.0.2.7) By Max
+1. 修改TAsyncMsgFlusher.cs，判斷如無ListBox顯示元件則不執行MsgList.Insert
+
+2016/10/11(v1.0.2.6) By Max
+1. 修改VirtualMotor、VirtualIO、VirtualCard與VirtualThread由資料庫改成SharedMemory
+2. 新增SharedMemory.dll至參考，虛擬元件需使用
+
+2016/10/04(v1.0.2.5) By Max
+1. 修改FlowChart，移除CASE5流程
+2. FlowChart設定StartFC與EndFC時，進入子流程編輯畫面時換用括弧提示
+3. 修正FlowChart流程執行到一半中途被停止時FlowChart屬性RunTaskOk未正確設定時的Bug
+
+2016/10/03(v1.0.2.4) By Max
+1. TLanguage 新增CurrentLanguage屬性可以讀取目前語系
+2. 細微修正FlowChart以滑鼠點選設定流程功能
+ 
+2016/09/30(v1.0.2.3) By Max
+1. 修改FlowChart設定流程功能，以滑鼠點選為主要操作方式
+2. 新增FlowSelect Form
+
+2016/09/23(v1.0.2.2) By Max
+1. 修改I/O 元件圖示
+2. FlowChart的流程設定由DesignerActionList改為DesignerVerbs實作
+
+2016/09/22(v1.0.2.1) By Max
+1. 元件新增ErrID屬性
+2. 將元件MsgID改為元件屬性並將Browsable Attribute設定為false
+3. 修改所有元件的NotifyDelegate與ErrorCodeEventHandler方法以配合ErrID屬性的新增
+4. 更新MNETMotor AlarmReset函式中Thread.Sleep時間，300ms改為10ms
+5. FlowChart 增加如有子FLowChart但未設定StartFC會設定ErrID -> 65
+6. FlowChart 將未設定下一流程的警告訊息分成NEXT、CASE1與CASE2
+7. MotorJog Form 新增Stop 按鈕功能，原來僅有FastStop
+8. 馬達、IO新增未設定IOPort的ErrID
+9. FlowChart新增流程設定至CASE5
+
+2016/09/13(v1.0.2.0) By Max
+1. AnalogIn元件使用分時掃瞄機制
+2. 元件重要屬性加入描述說明
+3. MotorJog Form在進階畫面中加入ServoOn功能
+4. 修改TObjectForm 類別AnalogIn元件分時掃描在關閉程式時出現陣列Index存取違規的例外
+5. 修改TAsyncMsgFlusher加入訊息至UI元件的方式，由Add改Insert
+6. FlowChartDesigner WndProc訊息處理函式中移除LBUTTONUP事件的Control鍵檢查
+7. SYNTEKMotor移除HomeByAdvance與HomeByHomeSensor Case91筆誤。
+8. InBit SetSMValue加入IsSimulation旗標判斷
+9. FowChart AfterRun case 加入FC.Running = true 處理顯示問題
+10. DataPos元件修改資料載入的部分，由被Binding的屬性取值改由直接由DataSource取值
+
+2016/09/06(v1.0.1.9) By Max
+1.修正RunTime一開始就在子FlowChart中，離開子FlowChart時元件上名稱顯示不正確的問題。
+2.修改TaskReset函式，避免Run到流程中的某一個FlowChart執行TaskReset，執行到一半那一個FlowChart的RunTaskOk旗標未重置導致執行有問題。
+3.ObjectForm加入LockUI屬性
+4.Motor、DO與AO會判斷Lock屬性決定是否可最元件作操作
+5.各元件屬性加入Catalog Attribute
+6.修改LockUI保護機制，改為手動操作時無法操作，使用程式仍可控制
+7.Motor元件移除LockUI保護
+8.修改FlowChart簡便設定NEXT、CASE與CASE2功能
+
+2016/08/26(v1.0.1.8) By Max
+1. MyTimer建構式新增IsStopable參數，表示系統停止運行時Timer的計數是否跟著停止運行，預設值為False
+2. MyTimer新增SetSystemStop公用函式提供外界通知Timer 系統已停止運行
+
+2016/08/23(v1.0.1.7) By Max
+1. 修改TObjectForm.cs 的ObjFormInit函式將IsSimulation參數傳入每個元件的ObjInit函式中
+2. DMCNetMotor.cs的Ini函式設定脈波輸出的部分加入IsPulse01PH
+
+2016/08/18(v1.0.1.6) By Max
+1. 馬達與IO元件動態產生功能測試完成
+2. 底層新增一執行緒負責掃描Input元件狀態
+3. 底層新增一Timer負責更新元件UI狀態
+4. InBit元件更新的程式碼移出Value屬性
+5. VirtualMotor與VirtualIO元件加入元件庫（需附上VirtualData.mdf與VirtualData_log.ldf檔）
+6. TrayData/TrayView修正設定變Pitch時使用手動圈選功能異常的問題
+
+2016/05/12(v1.0.1.5) By Max
+1. PitchCompensation.cs 修改ReadCompensateDataFromFile函式中的紀錄點位與補償值Map中的點位值不除以GearRatio
+2. PitchCompensation.cs 修改ReadCompensateDataFromFile函式中的反向表格補償值直接使用雷射干涉儀的補償值，舊版直接使用減掉背隙的方式 
+
+2016/05/11(v1.0.1.4) By Max
+1. ObjForm.cs 修改ObjFormInit函式，判斷如IsSimulation旗標為True話，則不呼叫元件Init函式
+
+2016/04/28(v1.0.1.3) By Max
+1. TrayView元件的DataUpdate函式將BeginInvoke修改為Invoke以避免再DrawTray或DrawBlock時發生資料被修改導致TrayView顯示異常
+
+2016/04/22(v1.0.1.2) By Max
+1. Motor元件新增HomeBeforeGoto屬性以設定該馬達是否需歸零後才可做點對點移動
+2. TAsyncMsgFlusher類別提供另一個AddMsg重載函式，明確指定存檔路徑，檔案名稱格式為"前置修飾詞_日期.log"
+
+2016/04/22(v1.0.1.1) By Max
+1. TrayData 將變Pitch相關函式設定由私有函式開成公用函式
+
+2016/03/11(v1.0.1.0) By Max
+1. DMCNetMotor新增ContinueMove指令
+2. DMCNetMotor新增G01指令
+
+2016/02/19(v1.0.0.9) By Max
+1. 更新非同步記Log機制，TextBox改ListBox，並使用獨立執行緒寫檔案
+2. 修正馬達元件設定頁設定參數後ServoOnPolarity會回到ACTIVELOW設定的問題
+
+2016/01/29(v1.0.0.8) By Max
+1. DMCAIO 調整SetRange等設定函式的位置，以避免ScanTime降低的問題
+
+2016/01/25(v1.0.0.7) By Max
+1. DMCCard 新增SetTriggerPolarity函式，提供可將軸卡輸出Trigger的訊號準位反向的功能
+
+2016/01/21(v1.0.0.6) By Max
+1. Motor新增ServoOnPolarity屬性，提供使用者設定ServoOn的電壓準位
+2. Motor新增AlarmPolarity屬性，提供使用者設定驅動器Alarm的準位
+
+2016/01/18(v1.0.0.5) By Max
+1. 修正各廠牌馬達歸零完後HomePos移動的邏輯
+2. DMCNETMotor加入M系列伺服ObjectType = 0x6030檢查
+
+2016/01/13(v1.0.0.4) By Max
+1. DMCNetMotor and SYNTEKMotor add SetCompareSourcePos and SetCompareSourceDir function
+
+2016/01/01(v1.0.0.4) By Max
+1. Add SYNTEK EtherCAT Control Component, included Motor, DI, DO, AI, AO
+
+2015/06/15(v1.0.0.3) By Max
+1. FlowChart加入執行時間功能
+
+2015/03/26(v1.0.0.2) By Max
+1. Add AIODMC.cs, AIOHSL.cs, AIOInTime.cs, AnalogIn.cs, AnalogOut.cs, MessageBoxManager.cs and TLanguage.cs
+2. Win32 and InTime Have Tested
+3. Flow Chart Bug Fixed
+
+2014/12/10(v1.0.0.1) By Max
+1. Move Alarm.cs to Application Layer
+2. Add Analog Control to version control
+3. Add PitchCompensation.cs
+4. Add InTime Function
+5. Delete LoggerFactiry.cs
+
+2014/07/15(v1.0.0.0) By Max
+1. Intial Version

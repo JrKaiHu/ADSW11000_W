@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <StatisticsParams>
+    <LoadHour>24</LoadHour>
+    <MeanTimeType>MTBF</MeanTimeType>
+  </StatisticsParams>
+  <ReportItems>
+    <ExcelFile>D:\ProVSimpleProject\ProVSimpleProject\bin\AppData\OEEReport.xls</ExcelFile>
+  </ReportItems>
+</Root>

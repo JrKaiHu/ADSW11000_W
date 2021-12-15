@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LogAnalyzer</name>
+    </assembly>
+    <members>
+        <member name="F:LogAnalyzer.CycleWidget.components">
+            <summary> 
+            設計工具所需的變數。
+            </summary>
+        </member>
+        <member name="M:LogAnalyzer.CycleWidget.Dispose(System.Boolean)">
+            <summary> 
+            清除任何使用中的資源。
+            </summary>
+            <param name="disposing">如果應該處置 Managed 資源則為 true，否則為 false。</param>
+        </member>
+        <member name="M:LogAnalyzer.CycleWidget.InitializeComponent">
+            <summary> 
+            此為設計工具支援所需的方法 - 請勿使用程式碼編輯器
+            修改這個方法的內容。
+            </summary>
+        </member>
+        <member name="T:LogAnalyzer.LogDb">
+            <summary>
+            提供將log寫入到DB的功能
+            </summary>
+        </member>
+        <member name="M:LogAnalyzer.LogDb.RunBeforeStartup">
+            <summary>
+            應用程式開啟時，若指定資料夾內無DB，則建立。
+            </summary>
+        </member>
+        <member name="M:LogAnalyzer.LogDb.LogSayDb(System.String)">
+            <summary>
+            寫入一般或警報訊息到DB。
+            </summary>
+            <param name="mMsg">字串格式相容ProVSimpleProject</param>
+        </member>
+        <member name="M:LogAnalyzer.LogDb.LogSayDb(System.UInt64,System.UInt64,System.UInt64,System.UInt64,System.UInt64)">
+            <summary>
+            寫入運轉時間資料到DB。
+            </summary>
+            <param name="runSecond">運轉時間</param>
+            <param name="homeTM">復歸時間</param>
+            <param name="idleTM">閒置時間</param>
+            <param name="manualTM">手動時間</param>
+            <param name="stopSecond">停止時間</param>
+        </member>
+        <member name="M:LogAnalyzer.LogDb.SpcSayDb(System.DateTime,System.String,System.String,System.Single[])">
+            <summary>
+            寫入SPC資料到DB。
+            </summary>
+            <param name="dateTime">結批日期</param>
+            <param name="part">料號</param>
+            <param name="lot">批號</param>
+            <param name="spcColumns">資料</param>
+        </member>
+        <member name="M:LogAnalyzer.LogDb.DataModifySayDb(System.DateTime,System.Collections.Generic.List{LogAnalyzer.DataModifyData})">
+            <summary>
+            寫入資料修改資料到DB。
+            </summary>
+            <param name="dateTime">修改日期</param>
+            <param name="list">資料列表</param>
+        </member>
+        <member name="M:LogAnalyzer.LogDb.DetachDeleteDb">
+            <summary>
+            手動刪除DB，測試用。
+            </summary>
+        </member>
+        <member name="M:LogAnalyzer.LogDb.RunBeforeClose">
+            <summary>
+            應用程式關閉前，壓縮DB的log檔與備份DB。
+            </summary>
+        </member>
+        <member name="M:LogAnalyzer.LogDb.WriteMtbaOrMtbf(System.String[])">
+            <summary>
+            將Alarm.xls分類的MTBA、MTBF寫入DB。
+            </summary>
+            <param name="alarm"></param>
+        </member>
+        <member name="T:LogAnalyzer.QueryWidget">
+            <summary>
+            提供查詢log的功能
+            </summary>
+        </member>
+        <member name="M:LogAnalyzer.QueryWidget.#ctor">
+            <summary>
+            提供查詢log的功能
+            </summary>
+        </member>
+        <member name="M:LogAnalyzer.QueryWidget.RefreshList">
+            <summary>
+            每次開啟應用程式與初次建立DB後，做更新
+            </summary>
+        </member>
+        <member name="F:LogAnalyzer.QueryWidget.components">
+            <summary> 
+            設計工具所需的變數。
+            </summary>
+        </member>
+        <member name="M:LogAnalyzer.QueryWidget.Dispose(System.Boolean)">
+            <summary> 
+            清除任何使用中的資源。
+            </summary>
+            <param name="disposing">如果應該處置 Managed 資源則為 true，否則為 false。</param>
+        </member>
+        <member name="M:LogAnalyzer.QueryWidget.InitializeComponent">
+            <summary> 
+            此為設計工具支援所需的方法 - 請勿使用程式碼編輯器
+            修改這個方法的內容。
+            </summary>
+        </member>
+        <member name="T:LogAnalyzer.ReportConfig">
+            <summary>
+            設定輸出報告參數
+            </summary>
+        </member>
+        <member name="F:LogAnalyzer.ReportConfig.SpcColumns">
+            <summary>
+            設定SPC欄位，最多七個
+            </summary>
+        </member>
+        <member name="P:LogAnalyzer.ReportConfig.LoadHour">
+            <summary>
+            設定設備負載時間
+            </summary>
+        </member>
+        <member name="P:LogAnalyzer.ReportConfig.MeanTimeType">
+            <summary>
+            設定錯誤計算為MTBA或MTBF
+            </summary>
+        </member>
+        <member name="P:LogAnalyzer.ReportConfig.FileDir">
+            <summary>
+            設定輸出報告目標資料夾路徑
+            </summary>
+        </member>
+        <member name="T:LogAnalyzer.ReportConfig.MeanTimeTypes">
+            <summary>
+            MTBA or MTBF
+            </summary>
+        </member>
+        <member name="F:LogAnalyzer.WaitingBanner.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LogAnalyzer.WaitingBanner.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:LogAnalyzer.WaitingBanner.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>
